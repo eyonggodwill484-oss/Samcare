@@ -39,7 +39,7 @@ const moreLinks = [
     icon: Phone,
   },
   {
-    title: 'Services',
+    title: 'Projects',
     href: '/palvelut',
     description: 'Explore our home care and nursing services.',
     icon: Stethoscope,
@@ -69,10 +69,10 @@ export default function MorePage() {
             src="/Images/Services%20image1.png"
             alt="More information about Sam's Care"
             fill
-            className="h-full w-full object-cover"
+            className="page-header-image h-full w-full object-cover"
           />
         </div>
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(15,23,42,0.88)_0%,rgba(15,23,42,0.62)_42%,rgba(15,23,42,0.1)_100%)]" />
+        <div className="page-header-overlay absolute inset-0 bg-[linear-gradient(90deg,rgba(15,23,42,0.88)_0%,rgba(15,23,42,0.62)_42%,rgba(15,23,42,0.1)_100%)]" />
 
         <div className="relative z-10 mx-auto flex min-h-[360px] max-w-6xl items-center justify-center px-4 py-12 text-center sm:px-6 lg:px-8 lg:py-20">
           <div className="max-w-3xl space-y-5">
