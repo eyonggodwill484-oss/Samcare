@@ -12,6 +12,7 @@ import {
   UserCheck,
   Ticket
 } from "lucide-react";
+import { createMailtoLink } from "@/lib/mailto";
 
 export default function AjanvarausPage() {
   const [submitted, setSubmitted] = useState(false);
@@ -30,21 +31,33 @@ export default function AjanvarausPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.name || !formData.phone || !formData.termsAccepted) {
-      alert("Please fill in required fields and accept the service terms.");
-      return;
-    }
     setSubmitted(true);
   };
 
   const services = [
-    { id: "kartoitus", name: "Free Care Consultation", desc: "0 € – Our head nurse visits your home to assess needs", icon: HeartHandshake },
-    { id: "kotihoito", name: "Home Care Visit", desc: "Daily living care, bathing, meals & companionship", icon: HeartHandshake },
-    { id: "kotisairaanhoito", name: "Home Nursing Visit", desc: "Wound care, injections, medications & clinical recovery", icon: Stethoscope },
-    { id: "verinayte", name: "In-Home Blood Testing", desc: "62 € – Lab samples collected in your living room", icon: Stethoscope },
-    { id: "avustaja", name: "Personal Assistance", desc: "Disability support or daily living assistant", icon: UserCheck },
-    { id: "palveluseteli", name: "Service Voucher Activation", desc: "Municipal voucher onboarding and setup", icon: Ticket },
+    { id: "kartoitus", name: "Maksuton kartoituskäynti", desc: "0 € – Johtava hoitajamme arvioi palvelutarpeesi kotonasi", icon: HeartHandshake },
+    { id: "kotihoito", name: "Kotihoitokäynti", desc: "Apua arkeen, peseytymiseen, aterioihin ja yhdessäoloon", icon: HeartHandshake },
+    { id: "kotisairaanhoito", name: "Kotisairaanhoidon käynti", desc: "Haavahoitoa, pistoksia, lääkehoitoa ja toipumisen tukea", icon: Stethoscope },
+    { id: "verinayte", name: "Verinäytteenotto kotona", desc: "62 € – Laboratorionäytteet otetaan kotonasi", icon: Stethoscope },
+    { id: "avustaja", name: "Henkilökohtainen apu", desc: "Tukea vammaisille ja apua päivittäiseen elämään", icon: UserCheck },
+    { id: "palveluseteli", name: "Palvelusetelin käyttöönotto", desc: "Autamme kunnan tai hyvinvointialueen palvelusetelin käyttöönotossa", icon: Ticket },
   ];
+  const mailtoLink = createMailtoLink(
+    "Ajanvarauspyyntö Sam's Carelle",
+    [
+      `Palvelu: ${services.find((item) => item.id === service)?.name ?? service}`,
+      `Nimi: ${formData.name}`,
+      `Puhelinnumero: ${formData.phone}`,
+      `Sähköposti: ${formData.email || "Ei ilmoitettu"}`,
+      `Kunta: ${formData.city}`,
+      `Toivottu päivämäärä: ${formData.preferredDate || "Ei ilmoitettu"}`,
+      `Toivottu aika: ${formData.timeSlot}`,
+      `Osoite: ${formData.address || "Ei ilmoitettu"}`,
+      "",
+      "Lisätiedot:",
+      formData.notes || "Ei lisätietoja",
+    ].join("\n"),
+  );
 
   return (
     <div className="flex flex-col w-full">
@@ -53,7 +66,7 @@ export default function AjanvarausPage() {
         <div className="absolute inset-0">
           <Image
             src="/Images/Services%20image1.png"
-            alt="Care service booking and consultation"
+            alt="Hoivapalvelun ajanvaraus ja kartoituskäynti"
             fill
             className="page-header-image h-full w-full object-cover"
           />
@@ -64,13 +77,13 @@ export default function AjanvarausPage() {
           <div className="max-w-3xl space-y-5">
             <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-white/10 text-slate-100 text-xs font-semibold uppercase tracking-wider border border-white/20 backdrop-blur-sm">
               <Calendar className="w-3.5 h-3.5 text-cyan-300" />
-              Simple & Fast Booking
+              Ajanvaraus helposti ja nopeasti
             </span>
             <h1 className="text-3xl sm:text-5xl font-black tracking-tight text-[#62ddc9] leading-tight">
-              Order Care or Book a Free Consultation
+              Tilaa hoivapalvelu tai varaa maksuton kartoituskäynti
             </h1>
             <p className="mx-auto max-w-2xl text-base text-slate-100 sm:text-lg">
-              Order the care service you need or schedule a complimentary, non-binding in-home assessment. We always confirm appointments personally by phone.
+              Tilaa tarvitsemasi hoivapalvelu tai varaa maksuton ja sitoumukseton kartoituskäynti kotiisi. Vahvistamme ajanvaraukset aina henkilökohtaisesti puhelimitse.
             </p>
           </div>
         </div>
@@ -86,17 +99,25 @@ export default function AjanvarausPage() {
                 <CheckCircle2 className="w-10 h-10" />
               </div>
               <h2 className="text-2xl sm:text-3xl font-bold text-emerald-950">
-                Thank you for your order, {formData.name}!
+                Sähköpostiluonnos valmis
               </h2>
               <p className="text-emerald-800 text-sm sm:text-base max-w-lg mx-auto">
-                We have received your booking request. Our head nurse will phone you to confirm your schedule and tailor the visit details.
+                Ajanvarauspyyntöä ei lähetetty verkkosivulta. Avaa luonnos ja
+                lähetä se sähköpostiohjelmastasi. Vahvistamme ajan puhelimitse
+                viestin saavuttua.
               </p>
+              <a
+                href={mailtoLink}
+                className="inline-flex items-center gap-2 rounded-xl bg-emerald-700 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-emerald-800"
+              >
+                Avaa sähköpostiluonnos
+              </a>
               <div className="pt-4">
                 <Link
                   href="/"
                   className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-emerald-700 text-white text-sm font-semibold hover:bg-emerald-800 transition-colors"
                 >
-                  Return to Home
+                  Takaisin etusivulle
                 </Link>
               </div>
             </div>
@@ -109,7 +130,7 @@ export default function AjanvarausPage() {
                   <div className="w-7 h-7 rounded-full bg-cyan-600 text-white text-xs font-bold flex items-center justify-center">
                     1
                   </div>
-                  <h2 className="text-xl font-bold text-slate-900">Select Care Service</h2>
+                  <h2 className="text-xl font-bold text-slate-900">Valitse hoivapalvelu</h2>
                 </div>
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
@@ -149,13 +170,13 @@ export default function AjanvarausPage() {
                   <div className="w-7 h-7 rounded-full bg-cyan-600 text-white text-xs font-bold flex items-center justify-center">
                     2
                   </div>
-                  <h2 className="text-xl font-bold text-slate-900">Preferred Time & Contact Details</h2>
+                  <h2 className="text-xl font-bold text-slate-900">Toivottu ajankohta ja yhteystiedot</h2>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1.5">
-                      Preferred Date
+                      Toivottu päivämäärä
                     </label>
                     <input
                       type="date"
@@ -166,17 +187,17 @@ export default function AjanvarausPage() {
                   </div>
                   <div>
                     <label className="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1.5">
-                      Preferred Time of Day
+                      Toivottu kellonaika
                     </label>
                     <select
                       value={formData.timeSlot}
                       onChange={(e) => setFormData({ ...formData, timeSlot: e.target.value })}
                       className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white text-sm outline-hidden"
                     >
-                      <option value="morning">Morning (08:00 – 12:00)</option>
-                      <option value="afternoon">Afternoon (12:00 – 16:00)</option>
-                      <option value="evening">Evening (16:00 – 21:00)</option>
-                      <option value="flexible">Flexible / Any time</option>
+                      <option value="morning">Aamu (08.00–12.00)</option>
+                      <option value="afternoon">Iltapäivä (12.00–16.00)</option>
+                      <option value="evening">Ilta (16.00–21.00)</option>
+                      <option value="flexible">Joustava / mikä tahansa aika</option>
                     </select>
                   </div>
                 </div>
@@ -184,12 +205,12 @@ export default function AjanvarausPage() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1.5">
-                      Client / Contact Name *
+                      Asiakkaan tai yhteyshenkilön nimi *
                     </label>
                     <input
                       type="text"
                       required
-                      placeholder="First and last name"
+                      placeholder="Etu- ja sukunimi"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white text-sm outline-hidden"
@@ -197,7 +218,7 @@ export default function AjanvarausPage() {
                   </div>
                   <div>
                     <label className="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1.5">
-                      Phone Number *
+                      Puhelinnumero *
                     </label>
                     <input
                       type="tel"
@@ -213,7 +234,7 @@ export default function AjanvarausPage() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1.5">
-                      Email Address
+                      Sähköposti
                     </label>
                     <input
                       type="email"
@@ -225,7 +246,7 @@ export default function AjanvarausPage() {
                   </div>
                   <div>
                     <label className="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1.5">
-                      Municipality in Finland *
+                      Kunta *
                     </label>
                     <select
                       value={formData.city}
@@ -240,18 +261,18 @@ export default function AjanvarausPage() {
                       <option value="Hanko">Hanko</option>
                       <option value="Inkoo">Inkoo</option>
                       <option value="Siuntio">Siuntio</option>
-                      <option value="Muu">Other Uusimaa</option>
+                      <option value="Muu">Muualla Uudellamaalla</option>
                     </select>
                   </div>
                 </div>
 
                 <div>
                   <label className="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1.5">
-                    Street Address & Door Code (if applicable)
+                    Katuosoite ja ovikoodi (tarvittaessa)
                   </label>
                   <input
                     type="text"
-                    placeholder="E.g. Ansatie 18 B 4, 02940 Espoo"
+                    placeholder="Esim. Ansatie 18 B 4, 02940 Espoo"
                     value={formData.address}
                     onChange={(e) => setFormData({ ...formData, address: e.target.value })}
                     className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white text-sm outline-hidden"
@@ -260,11 +281,11 @@ export default function AjanvarausPage() {
 
                 <div>
                   <label className="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1.5">
-                    Care Requirements or Client Notes
+                    Hoivatarpeet tai lisätiedot
                   </label>
                   <textarea
                     rows={3}
-                    placeholder="Briefly describe the client's current condition or desired support..."
+                    placeholder="Kuvaile lyhyesti asiakkaan tilannetta tai toivottua tukea..."
                     value={formData.notes}
                     onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
                     className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white text-sm outline-hidden resize-none"
@@ -281,7 +302,7 @@ export default function AjanvarausPage() {
                     className="w-4 h-4 mt-0.5 rounded-sm border-slate-300 text-cyan-600 focus:ring-cyan-500"
                   />
                   <label htmlFor="terms" className="text-xs text-slate-600 leading-relaxed">
-                    I have read and agree to Sam&apos;s Care service terms and privacy policy. We will confirm all order details by phone before care commences.
+                    Olen lukenut ja hyväksyn Sam&apos;s Caren palveluehdot ja tietosuojakäytännön. Vahvistamme tilauksen tiedot puhelimitse ennen palvelun alkamista.
                   </label>
                 </div>
 
@@ -290,7 +311,7 @@ export default function AjanvarausPage() {
                   className="w-full py-4 px-6 rounded-xl bg-gradient-to-r from-cyan-600 to-teal-600 hover:from-cyan-700 hover:to-teal-700 text-white font-bold text-base shadow-lg shadow-cyan-600/25 transition-all flex items-center justify-center gap-2"
                 >
                   <Send className="w-4 h-4" />
-                  <span>Submit Booking / Consultation Request</span>
+                  <span>Valmistele sähköpostipyyntö</span>
                 </button>
               </form>
 

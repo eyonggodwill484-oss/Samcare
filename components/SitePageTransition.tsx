@@ -16,6 +16,7 @@ export default function SitePageTransition({
     <AnimatePresence initial={false} mode="wait">
       <motion.div
         key={pathname}
+        className="page-transition-content"
         initial={
           prefersReducedMotion ? false : { opacity: 0, y: 8 }
         }

@@ -6,11 +6,9 @@ import {
   Star
 } from "lucide-react";
 import QuickConsultationForm from "@/components/QuickConsultationForm";
+import { asiakkaatKertovatSEO } from "@/seo";
 
-export const metadata = {
-  title: "Asiakkaat Kertovat | Sam's Care Oy - Kokemuksia ja Palautteita",
-  description: "Lue omaisten ja asiakkaiden aitoja kokemuksia Sam's Caren kotihoidosta ja sairaanhoidosta. Tyytyväisyys ja luottamus ovat toimintamme perusta.",
-};
+export const metadata = asiakkaatKertovatSEO;
 
 export default function AsiakkaatKertovatPage() {
   const reviews = [
@@ -59,7 +57,7 @@ export default function AsiakkaatKertovatPage() {
         <div className="absolute inset-0">
           <Image
             src="/Images/Services%20image1.png"
-            alt="Client experiences and recommendations"
+            alt="Asiakkaiden kokemuksia ja suosituksia"
             fill
             className="page-header-image h-full w-full object-cover"
           />
@@ -86,7 +84,7 @@ export default function AsiakkaatKertovatPage() {
       <section className="py-12 bg-white border-b border-slate-200">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
           <h2 className="text-2xl font-bold text-slate-900">
-            Systemaattista laatutyötä ja jatkuvaa kuuntelua
+            Järjestelmällistä laatutyötä ja asiakkaiden kuuntelemista
           </h2>
           <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
             Me pyrimme asettamaan riman korkealle ja tehtävämme on olla kaikissa tilanteissa asiakkaidemme ja heidän omaistensa luottamuksen arvoinen. Sam&apos;s Caressa tehdään systemaattista laatutyötä ja selvitämme säännöllisesti asiakkaidemme tyytyväisyyttä.
@@ -137,7 +135,7 @@ export default function AsiakkaatKertovatPage() {
         </div>
       </section>
 
-      {/* Free consultation banner */}
+      {/* Maksuttoman kartoituksen banneri */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <QuickConsultationForm 

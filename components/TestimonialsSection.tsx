@@ -7,30 +7,30 @@ export default function TestimonialsSection() {
   const testimonials = [
     {
       author: "Päivi L.",
-      role: "Family Relative (Lohja)",
-      quote: "After many years of managing my parents' care, I feel that getting Sam's Care home care has given me my own life back! It is incredible with what immense heart and expertise my parents are looked after every single day.",
-      highlight: "I have received my own life back!",
+      role: "Perheenjäsen (Lohja)",
+      quote: "Monien vuosien ajan vanhempieni hoidosta huolehtiminen oli raskasta, mutta Sam's Care -kotihoito on antanut minulle takaisin oman elämäni. On uskomatonta, kuinka sydämellisesti ja asiantuntevasti vanhempani saavat hoitoa joka päivä.",
+      highlight: "Olen saanut takaisin oman elämäni!",
       rating: 5,
     },
     {
       author: "Marjatta & Eero",
-      role: "Family Caregiver & Client (Espoo)",
-      quote: "My husband is an ALS patient and having a trusting nurse relationship is vital for us. Sam's Care's service coordinator helped us find a fantastic, competent and empathetic nurse on very short notice. We give you nothing but praise!",
-      highlight: "Nothing but praise for your service!",
+      role: "Omaishoitaja & asiakas (Espoo)",
+      quote: "Mieheni on ALS-potilas, joten luotettavan hoitosuhteen rakentaminen on elintärkeää. Sam's Care -palvelukoordinaattori auttoi meitä löytämään loistavan, pätevän ja empaattisen hoitajan erittäin nopeasti. Meillä ei ole kuin ylistäviä sanoja!",
+      highlight: "Meillä ei ole kuin ylistäviä sanoja!",
       rating: 5,
     },
     {
       author: "Antti K.",
-      role: "Home Care Client (Helsinki)",
-      quote: "Special thanks for keeping the same familiar nurse. The nurses aren't rushing on a minute-by-minute schedule, so we have time to catch up, handle medications, and take care of daily routines in peace. Warmth and common sense shine through.",
-      highlight: "The nurse stays the same with plenty of time.",
+      role: "Kotihoidon asiakas (Helsinki)",
+      quote: "Erityiskiitos siitä, että sama tuttu hoitaja on pysynyt mukana. Hoitajat eivät kiirehdi minuutti minuutilta, vaan meillä on aikaa jutella, hoitaa lääkkeet ja tehdä päivittäiset rutiinit rauhassa. Lämmöllä ja järjellä on suuri merkitys.",
+      highlight: "Hoitaja pysyy samana ja aikaa on riittävästi.",
       rating: 5,
     },
     {
       author: "Gunilla S.",
-      role: "Family Relative (Raasepori)",
-      quote: "Att få vård på sitt modersmål svenska betyder oerhört mycket för min mamma. Vårdarna är punktliga, varma och oerhört kompetenta. Rekommenderar Sam's Care varmt till alla!",
-      highlight: "Home care in Swedish with great dedication.",
+      role: "Perheenjäsen (Raasepori)",
+      quote: "On tärkeää saada hoitoa omalla äidinkielellään ruotsiksi. Hoitajat ovat täsmällisiä, lämpimiä ja erittäin päteviä. Suosittelen Sam's Carea lämpimästi kaikille!",
+      highlight: "Kotihoitoa ruotsiksi suurella sydämellä.",
       rating: 5,
     },
   ];
@@ -40,13 +40,13 @@ export default function TestimonialsSection() {
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto mb-16 max-w-3xl space-y-3 text-center">
           <div className="inline-flex items-center gap-1.5 rounded-full bg-teal-100 px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-teal-800">
-            Client & Family Experiences
+            Asiakkaiden ja perheiden kokemuksia
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900">
-            Genuine Trust from Families and Clients
+            Aitoa luottamusta perheiltä ja asiakkailta
           </h2>
           <p className="text-slate-600 text-base sm:text-lg">
-            Care services are always delivered from person to person. Satisfied clients and relieved families are the greatest testament to the quality of our care.
+            Hoivapalvelut toteutetaan aina henkilöstä toiseen. Tyytyväiset asiakkaat ja helpottuneet perheet kertovat parhaiten hoivamme laadusta.
           </p>
         </div>
 
@@ -109,7 +109,7 @@ export default function TestimonialsSection() {
                     data-testimonial-part
                     className="w-4 h-4"
                   />
-                  <span data-testimonial-part>Verified Review</span>
+                  <span data-testimonial-part>Vahvistettu arvio</span>
                 </div>
               </div>
             </div>
@@ -125,7 +125,7 @@ export default function TestimonialsSection() {
               suffix="%"
               className="text-3xl font-extrabold text-cyan-800 sm:text-4xl"
             />
-            <div className="mt-1 text-xs font-medium text-slate-600 sm:text-sm">Familiar Personal Nurses</div>
+            <div className="mt-1 text-xs font-medium text-slate-600 sm:text-sm">Tuttuja hoitajia</div>
           </div>
           <div>
             <AnimatedStat
@@ -133,14 +133,14 @@ export default function TestimonialsSection() {
               suffix="/7"
               className="text-3xl font-extrabold text-teal-700 sm:text-4xl"
             />
-            <div className="mt-1 text-xs font-medium text-slate-600 sm:text-sm">On-Call Readiness</div>
+            <div className="mt-1 text-xs font-medium text-slate-600 sm:text-sm">Valmius 24/7</div>
           </div>
           <div>
             <AnimatedStat
               value={5}
               className="text-3xl font-extrabold text-amber-700 sm:text-4xl"
             />
-            <div className="mt-1 text-xs font-medium text-slate-600 sm:text-sm">Care Languages</div>
+            <div className="mt-1 text-xs font-medium text-slate-600 sm:text-sm">Hoitokielet</div>
           </div>
           <div>
             <AnimatedStat
@@ -148,7 +148,7 @@ export default function TestimonialsSection() {
               suffix="%"
               className="text-3xl font-extrabold text-emerald-700 sm:text-4xl"
             />
-            <div className="mt-1 text-xs font-medium text-slate-600 sm:text-sm">Finnish Tax Deduction</div>
+            <div className="mt-1 text-xs font-medium text-slate-600 sm:text-sm">Suomalainen verovähennys</div>
           </div>
         </div>
       </div>

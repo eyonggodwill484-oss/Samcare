@@ -6,68 +6,79 @@ import {
   Calendar,
   Globe,
   Headphones,
+  FileText,
   MessageSquareQuote,
   Phone,
+  ShieldCheck,
   Stethoscope,
 } from 'lucide-react';
+import { moreSEO } from '@/seo';
 
-export const metadata = {
-  title: "More | Sam's Care Oy",
-  description:
-    'Find multilingual care information, client testimonials, job opportunities, and contact details.',
-};
+export const metadata = moreSEO;
 
 const moreLinks = [
   {
-    title: 'Appointment',
+    title: 'Ajanvaraus',
     href: '/ajanvaraus',
     description:
-      'Book a free consultation or request a home care visit.',
+      'Varaa maksuton kartoituskäynti tai pyydä kotikäyntiä.',
     icon: Calendar,
   },
   {
-    title: 'Testimonials',
+    title: 'Asiakkaat kertovat',
     href: '/asiakkaat-kertovat',
-    description: 'Read community feedback and experiences from our clients.',
+    description: 'Lue asiakkaidemme kokemuksia ja palautteita.',
     icon: MessageSquareQuote,
   },
   {
-    title: 'Contact us',
+    title: 'Ota yhteyttä',
     href: '/ota-yhteytta',
     description:
-      'Get in touch with our care team and discuss your needs.',
+      'Ota yhteyttä hoitotiimiimme ja keskustele palvelutarpeistasi.',
     icon: Phone,
   },
   {
-    title: 'Projects',
+    title: 'Palvelut',
     href: '/palvelut',
-    description: 'Explore our home care and nursing services.',
+    description: 'Tutustu kotihoito- ja sairaanhoitopalveluihimme.',
     icon: Stethoscope,
   },
   {
-    title: 'Swedish-speaking care',
+    title: 'Hinnasto',
+    href: '/hinnasto',
+    description: 'Tutustu kotihoidon ja muiden hoivapalvelujen hintoihin.',
+    icon: FileText,
+  },
+  {
+    title: 'Laatu ja hygienia',
+    href: '/laatu-ja-hygienia',
+    description: 'Lue kotihoidon hygieniakäytännöistä ja omavalvonnasta.',
+    icon: ShieldCheck,
+  },
+  {
+    title: 'Monikielinen hoiva',
     href: '/kielet',
     description:
-      'Learn about our Swedish-speaking care and other language support.',
+      'Lue lisää ruotsinkielisestä hoivasta ja muusta kielituestamme.',
     icon: Globe,
   },
   {
-    title: 'Apply for a job',
+    title: 'Hae työtä',
     href: '/hae-tyota',
     description:
-      'Join our team and help people live safely and comfortably at home.',
+      'Liity tiimiimme ja auta ihmisiä asumaan turvallisesti ja mukavasti kotona.',
     icon: Briefcase,
   },
 ];
 
 export default function MorePage() {
   return (
-    <main className="min-h-screen bg-slate-50">
+    <div className="min-h-screen bg-slate-50">
       <section className="relative isolate overflow-hidden min-h-[360px] w-full bg-slate-950 text-white">
         <div className="absolute inset-0">
           <Image
             src="/Images/Services%20image1.png"
-            alt="More information about Sam's Care"
+            alt="Lisätietoa Sam's Caresta"
             fill
             className="page-header-image h-full w-full object-cover"
           />
@@ -78,14 +89,14 @@ export default function MorePage() {
           <div className="max-w-3xl space-y-5">
             <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-slate-100 backdrop-blur-sm">
               <Headphones className="h-3.5 w-3.5" />
-              More information
+              Lisätietoa
             </span>
             <h1 className="text-3xl font-black tracking-tight text-[#62ddc9] sm:text-5xl">
-              More about Sam&apos;s Care
+              Lisää Sam&apos;s Caresta
             </h1>
             <p className="mx-auto max-w-2xl text-base text-slate-100 sm:text-lg">
-              Explore the extra pages that support your care journey, from
-              multilingual service information to contact and team opportunities.
+              Tutustu palveluitamme tukeviin lisäsivuihin: löydät tietoa
+              monikielisistä palveluista, yhteydenotosta ja työmahdollisuuksista.
             </p>
           </div>
         </div>
@@ -107,13 +118,13 @@ export default function MorePage() {
                 {description}
               </p>
               <div className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-cyan-700">
-                Open page
+                Avaa sivu
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </div>
             </Link>
           ))}
         </div>
       </section>
-    </main>
+    </div>
   );
 }

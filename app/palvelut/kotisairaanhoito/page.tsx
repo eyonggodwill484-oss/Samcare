@@ -4,7 +4,6 @@ import Link from "next/link";
 import {
   Stethoscope,
   CheckCircle2,
-  Phone,
   ShieldCheck,
   Activity,
   HeartPulse,
@@ -13,20 +12,18 @@ import {
   FileCheck
 } from "lucide-react";
 import QuickConsultationForm from "@/components/QuickConsultationForm";
+import { kotisairaanhoitoSEO } from "@/seo";
 
-export const metadata = {
-  title: "Home Nursing | Sam's Care Oy - Professional In‑Home Healthcare",
-  description: "Professional in‑home nursing: medication administration, injections, wound care, lab samples, and post‑surgery recovery support in Uusimaa.",
-};
+export const metadata = kotisairaanhoitoSEO;
 
 export default function KotisairaanhoitoPage() {
   const procedures = [
-    { title: "Medication administration", desc: "Medication dispensing, prescription renewal, pharmacy errands and regular dosing.", icon: Pill },
-    { title: "Injections and shots", desc: "Insulin, Klexane/anticoagulants, B12 vitamin injections and vaccinations safely at home.", icon: Syringe },
-    { title: "Advanced wound care", desc: "Management of chronic and surgical wounds, dressing changes and healing monitoring.", icon: ShieldCheck },
-    { title: "Home lab sampling", desc: "Blood and rapid tests (INR, CRP, glucose) without waiting at a laboratory.", icon: Activity },
-    { title: "Suture & stitch removal", desc: "Pain‑free removal of post‑surgery stitches and sutures at home.", icon: FileCheck },
-    { title: "Catheter & tube feeding", desc: "Urinary catheter changes and flushing as well as PEG tube care performed by experienced staff.", icon: HeartPulse },
+    { title: "Lääkehoito", desc: "Lääkkeiden annostelu, reseptien uusiminen, apteekkiasiointi ja säännöllisestä lääkityksestä huolehtiminen.", icon: Pill },
+    { title: "Pistokset", desc: "Insuliini-, Klexane- ja B12-vitamiinipistokset sekä rokotukset turvallisesti kotona.", icon: Syringe },
+    { title: "Haavahoito", desc: "Kroonisten ja leikkaushaavojen hoito, sidosten vaihto ja paranemisen seuranta.", icon: ShieldCheck },
+    { title: "Näytteenotto kotona", desc: "Verinäytteet ja pikatestit (INR, CRP, verensokeri) ilman laboratoriossa odottamista.", icon: Activity },
+    { title: "Ompeleiden poisto", desc: "Leikkauksen jälkeisten ompeleiden poisto kotona.", icon: FileCheck },
+    { title: "Katetri- ja PEG-hoito", desc: "Virtsakatetrin vaihto ja huuhtelu sekä PEG-letkun hoito kokeneen henkilöstön toteuttamana.", icon: HeartPulse },
   ];
 
   return (
@@ -36,7 +33,7 @@ export default function KotisairaanhoitoPage() {
         <div className="absolute inset-0">
           <Image
             src="/Images/Services%20image1.png"
-            alt="Home nursing in a familiar environment"
+            alt="Kotisairaanhoitoa tutussa ympäristössä"
             fill
             className="page-header-image h-full w-full object-cover"
           />
@@ -47,13 +44,13 @@ export default function KotisairaanhoitoPage() {
           <div className="max-w-3xl space-y-5">
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 text-slate-100 text-xs font-semibold uppercase tracking-wider border border-white/20 backdrop-blur-sm">
               <Stethoscope className="w-3.5 h-3.5 text-cyan-300" />
-              Licensed nurses & caregivers
+              Laillistetut sairaanhoitajat ja hoitajat
             </span>
             <h1 className="text-3xl sm:text-5xl font-black tracking-tight text-[#62ddc9] leading-tight">
-              Home Nursing – Expertise & safety in your own home
+              Kotisairaanhoitoa ammattitaidolla ja turvallisesti kotonasi
             </h1>
             <p className="mx-auto max-w-2xl text-base text-slate-100 sm:text-lg">
-              Avoid unnecessary trips to health centers or hospitals. Sam&apos;s Care&apos;s experienced nurses come to you and perform the required medical procedures in a familiar and comforting home environment.
+              Vältä tarpeettomat matkat terveysasemalle tai sairaalaan. Sam&apos;s Caren kokeneet sairaanhoitajat tulevat luoksesi ja tekevät tarvittavat hoitotoimenpiteet tutussa ja turvallisessa kotiympäristössä.
             </p>
           </div>
         </div>
@@ -64,10 +61,10 @@ export default function KotisairaanhoitoPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           <div className="text-center max-w-3xl mx-auto space-y-3">
             <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900">
-              Comprehensive in‑home medical procedures
+              Monipuoliset sairaanhoidon toimenpiteet kotona
             </h2>
             <p className="text-slate-600 text-sm sm:text-base">
-              In addition to basic care we perform advanced procedures and collaborate closely with the treating physician and specialist services.
+              Perushoidon lisäksi toteutamme vaativampia toimenpiteitä ja teemme tiivistä yhteistyötä hoitavan lääkärin ja erikoissairaanhoidon kanssa.
             </p>
           </div>
 
@@ -97,46 +94,46 @@ export default function KotisairaanhoitoPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <span className="text-xs font-bold uppercase tracking-wider text-cyan-700 bg-cyan-50 px-3 py-1 rounded-full">
-                Post‑surgery recovery & Palliative care
+                Leikkauksesta toipuminen ja palliatiivinen hoito
               </span>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
-                Support for the most vulnerable situations
+                Tukea vaativiin elämäntilanteisiin
               </h2>
               <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-                Our professional nurses assist with post‑surgery care so the client can focus on recovery at home without additional strain.
+                Ammattitaitoiset sairaanhoitajamme tukevat leikkauksen jälkeistä hoitoa, jotta asiakas voi keskittyä toipumiseen kotona ilman ylimääräistä kuormitusta.
               </p>
               <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-                We also provide compassionate palliative care, offering pain relief and respectful support for patients and their families.
+                Tarjoamme myös palliatiivista hoitoa, jossa huolehdimme oireiden lievityksestä ja tuemme asiakasta sekä hänen läheisiään kunnioittavasti.
               </p>
               <div className="space-y-2 text-sm text-slate-700">
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-                  <span>Continuity and familiar caregiver create safety</span>
+                  <span>Jatkuvuus ja tuttu hoitaja lisäävät turvallisuutta</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-                  <span>Effective pain and symptom monitoring & medication</span>
+                  <span>Kivun ja oireiden seuranta sekä lääkehoito</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-                  <span>Emotional and practical support for relatives</span>
+                  <span>Henkinen ja käytännön tuki läheisille</span>
                 </div>
               </div>
             </div>
 
             <div className="bg-slate-900 text-white p-8 sm:p-10 rounded-3xl shadow-xl space-y-6">
               <h3 className="text-xl font-bold text-white">
-                Home blood sampling without waiting
+                Verinäytteet kotona ilman jonottamista
               </h3>
               <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
-                We will come in the morning to collect physician‑ordered lab and blood samples at home. Price €62 per visit (no extra fees). Samples are delivered directly to the laboratory for analysis.
+                Tulemme aamulla ottamaan lääkärin määräämät laboratorio- ja verinäytteet kotonasi. Hinta on 62 € käynniltä ilman lisämaksuja. Toimitamme näytteet laboratorioon analysoitaviksi.
               </p>
               <div className="pt-2">
                 <Link
                   href="/ajanvaraus"
                   className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-sm shadow-md transition-colors"
                 >
-                  Order home blood sampling
+                  Varaa verinäytteenotto kotiin
                 </Link>
               </div>
             </div>
@@ -148,8 +145,8 @@ export default function KotisairaanhoitoPage() {
       <section className="py-20 bg-slate-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <QuickConsultationForm 
-            title="Request home nursing"
-            subtitle="Tell us the desired procedure or timing. Our nurse will contact you."
+            title="Pyydä kotisairaanhoitoa"
+            subtitle="Kerro toimenpiteen tarpeesta tai toivotusta ajankohdasta, niin sairaanhoitajamme ottaa sinuun yhteyttä."
           />
         </div>
       </section>

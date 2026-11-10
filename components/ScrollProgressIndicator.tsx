@@ -51,11 +51,11 @@ export default function ScrollProgressIndicator() {
   return (
     <div
       role="progressbar"
-      aria-label="Page scroll progress"
+      aria-label="Sivun vierityksen edistyminen"
       aria-valuemin={0}
       aria-valuemax={100}
       aria-valuenow={progress}
-      aria-valuetext={`${progress}% scrolled`}
+      aria-valuetext={`${progress} % sivusta vieritetty`}
       className="fixed right-4 bottom-4 z-[60] flex size-14 items-center justify-center rounded-full bg-[#045184] shadow-[0_4px_16px_rgba(4,81,132,0.28)] sm:right-6 sm:bottom-6"
     >
       <svg

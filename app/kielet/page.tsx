@@ -20,7 +20,7 @@ export default function KieletPage() {
         <div className="absolute inset-0">
           <Image
             src="/Images/Services%20image1.png"
-            alt="Multilingual home services"
+            alt="Monikieliset kotihoitopalvelut"
             fill
             className="page-header-image h-full w-full object-cover"
           />
@@ -56,7 +56,7 @@ export default function KieletPage() {
               }`}
             >
               <span>🇸🇪</span>
-              <span>Svenska (Hemvård på svenska)</span>
+              <span>Ruotsinkieliset palvelut</span>
             </button>
 
             <button
@@ -68,7 +68,7 @@ export default function KieletPage() {
               }`}
             >
               <span>🇬🇧</span>
-              <span>English (Home Care & Nursing)</span>
+              <span>Englanninkieliset palvelut</span>
             </button>
 
             <button
@@ -80,7 +80,7 @@ export default function KieletPage() {
               }`}
             >
               <span>🇫🇷</span>
-              <span>Français (Soins à domicile)</span>
+              <span>Ranskankieliset palvelut</span>
             </button>
 
             <button
@@ -92,7 +92,7 @@ export default function KieletPage() {
               }`}
             >
               <span>🇪🇸</span>
-              <span>Español (Atención domiciliaria)</span>
+              <span>Espanjankieliset palvelut</span>
             </button>
           </div>
         </div>
@@ -102,53 +102,53 @@ export default function KieletPage() {
       <section className="py-16 bg-slate-50">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          {/* SVENSKA */}
+          {/* Ruotsinkieliset palvelut */}
           {activeTab === "sv" && (
             <div className="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200 shadow-xl space-y-8 animate-fadeIn">
               <div className="flex items-center gap-3">
                 <span className="text-4xl">🇸🇪</span>
                 <div>
                   <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
-                    Hemvård och hemsjukvård på svenska i Nyland
+                    Kotihoitoa ruotsiksi Uudellamaalla
                   </h2>
                   <div className="text-sm text-cyan-700 font-semibold">
-                    Lojo, Raseborg, Esbo, Helsingfors, Vanda, Hangö och Ingå
+                    Lohja, Raasepori, Espoo, Helsinki, Vantaa, Hanko ja Inkoo
                   </div>
                 </div>
               </div>
 
               <p className="text-slate-700 text-base leading-relaxed">
-                Hos Sam&apos;s Care får du professionell hemvård på ditt modersmål svenska med högsta kvalitet och ett varmt bemötande. Det är viktigt för oss att möta varje klient i lugn och ro med respekt och genuint engagemang. Vi är en godkänd servicesedeltuottaja (tjänsteproducent för servicesedlar).
+                Sam&apos;s Care tarjoaa kotihoitoa ruotsiksi laadukkaasti ja lämpimällä otteella. Kohtaamme jokaisen asiakkaan rauhassa, kunnioittavasti ja aidosti välittäen. Olemme hyväksytty palvelusetelituottaja.
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
                 <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
-                  <h3 className="font-bold text-slate-900 text-lg">Våra tjänster på svenska:</h3>
+                  <h3 className="font-bold text-slate-900 text-lg">Ruotsinkielisiin palveluihimme kuuluvat:</h3>
                   <ul className="space-y-2 text-xs sm:text-sm text-slate-700">
                     <li className="flex items-start gap-2">
                       <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                      <span><strong>Hemvård:</strong> Stöd i vardagen, personlig hygien, måltider och sällskap.</span>
+                      <span><strong>Kotihoito:</strong> Tukea arkeen, henkilökohtaiseen hygieniaan, ruokailuun ja yhdessäoloon.</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                      <span><strong>Hemsjukvård:</strong> Läkemedelsutdelning, såromläggning, blodprov och rehabilitering.</span>
+                      <span><strong>Kotisairaanhoito:</strong> Lääkehoitoa, haavahoitoa, verinäytteiden ottoa ja kuntoutusta.</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                      <span><strong>Personlig assistans:</strong> Enligt handikappservicelagen, helt kostnadsfritt för klienten.</span>
+                      <span><strong>Henkilökohtainen apu:</strong> Vammaispalvelulain mukaisesti ja hyvinvointialueen päätöksen mukaan.</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                      <span><strong>Servicesedlar:</strong> Vi accepterar servicesedlar från välfärdsområdet.</span>
+                      <span><strong>Palvelusetelit:</strong> Hyväksymme hyvinvointialueen myöntämät palvelusetelit.</span>
                     </li>
                   </ul>
                 </div>
 
                 <div className="p-6 rounded-2xl bg-cyan-50 border border-cyan-100 flex flex-col justify-between space-y-4">
                   <div>
-                    <h3 className="font-bold text-cyan-950 text-lg">Kontakta oss på svenska</h3>
+                    <h3 className="font-bold text-cyan-950 text-lg">Ota yhteyttä ruotsinkielisistä palveluista</h3>
                     <p className="text-xs text-cyan-800 leading-relaxed mt-1">
-                      Ring direkt till vår svenskspråkiga jour eller boka ett kostnadsfritt kartläggningsbesök i ditt hem.
+                      Voit soittaa alueemme hoitajille tai varata maksuttoman kartoituskäynnin kotiisi. Kerro yhteydenotossasi, jos toivot palvelua ruotsiksi.
                     </p>
                   </div>
                   <div className="space-y-2 pt-2">
@@ -157,7 +157,7 @@ export default function KieletPage() {
                       className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-cyan-700 hover:bg-cyan-800 text-white font-bold text-sm shadow-md transition-colors"
                     >
                       <Phone className="w-4 h-4" />
-                      <span>Raseborg & Svenska: 044 763 1820</span>
+                      <span>Raasepori ja ruotsinkieliset palvelut: 044 763 1820</span>
                     </a>
                   </div>
                 </div>
@@ -165,53 +165,53 @@ export default function KieletPage() {
             </div>
           )}
 
-          {/* ENGLISH */}
+          {/* Englanninkieliset palvelut */}
           {activeTab === "en" && (
             <div className="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200 shadow-xl space-y-8 animate-fadeIn">
               <div className="flex items-center gap-3">
                 <span className="text-4xl">🇬🇧</span>
                 <div>
                   <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
-                    Professional Home Care & Nursing in English
+                    Kotihoitoa ja kotisairaanhoitoa englanniksi
                   </h2>
                   <div className="text-sm text-cyan-700 font-semibold">
-                    Serving Espoo, Helsinki, Vantaa, Lohja and the Uusimaa region
+                    Palvelemme Espoossa, Helsingissä, Vantaalla, Lohjalla ja muualla Uudellamaalla
                   </div>
                 </div>
               </div>
 
               <p className="text-slate-700 text-base leading-relaxed">
-                Navigating elderly care or healthcare in Finland as an expatriate or English speaker can be challenging. Sam&apos;s Care provides compassionate, fluent English-speaking nurses and caregivers to support you or your loved ones in the comfort of your home.
+                Hoivan ja terveyspalveluiden järjestäminen Suomessa voi olla haastavaa, jos suomi ei ole äidinkielesi. Sam&apos;s Care tarjoaa englanninkielistä kotihoitoa ja kotisairaanhoitoa sinulle tai läheisellesi tutussa kotiympäristössä.
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
                 <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
-                  <h3 className="font-bold text-slate-900 text-lg">Services provided:</h3>
+                  <h3 className="font-bold text-slate-900 text-lg">Palveluihimme kuuluvat:</h3>
                   <ul className="space-y-2 text-xs sm:text-sm text-slate-700">
                     <li className="flex items-start gap-2">
                       <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                      <span><strong>Home Nursing:</strong> Injections, wound dressing, medication dosage, blood testing.</span>
+                      <span><strong>Kotisairaanhoito:</strong> Pistokset, haavojen sidonta, lääkehoito ja verinäytteiden otto.</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                      <span><strong>Personal Care:</strong> Dressing, bathing, meal preparation, accompaniment to doctor visits.</span>
+                      <span><strong>Henkilökohtainen hoiva:</strong> Pukeutumisessa ja peseytymisessä avustaminen, ruoanlaitto ja saattaminen lääkärikäynneille.</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                      <span><strong>Tax Deduction:</strong> 60% household tax deduction applies to all care hours.</span>
+                      <span><strong>Kotitalousvähennys:</strong> Hoivapalvelut voivat oikeuttaa kotitalousvähennykseen voimassa olevien ehtojen mukaisesti.</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                      <span><strong>Service Vouchers:</strong> Accepted through city wellbeing service counties.</span>
+                      <span><strong>Palvelusetelit:</strong> Hyväksymme hyvinvointialueiden myöntämiä palveluseteleitä.</span>
                     </li>
                   </ul>
                 </div>
 
                 <div className="p-6 rounded-2xl bg-cyan-50 border border-cyan-100 flex flex-col justify-between space-y-4">
                   <div>
-                    <h3 className="font-bold text-cyan-950 text-lg">Book a free consultation</h3>
+                    <h3 className="font-bold text-cyan-950 text-lg">Varaa maksuton kartoituskäynti</h3>
                     <p className="text-xs text-cyan-800 leading-relaxed mt-1">
-                      We offer a complimentary in-home assessment visit to tailor a personalized care plan to your exact needs.
+                      Tulemme maksuttomalle kartoituskäynnille kotiisi ja suunnittelemme palvelut yksilöllisten tarpeidesi mukaan.
                     </p>
                   </div>
                   <div className="space-y-2 pt-2">
@@ -220,7 +220,7 @@ export default function KieletPage() {
                       className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-cyan-700 hover:bg-cyan-800 text-white font-bold text-sm shadow-md transition-colors"
                     >
                       <Phone className="w-4 h-4" />
-                      <span>Call our nurse: +358 50 555 1187</span>
+                      <span>Soita hoitajalle: +358 50 555 1187</span>
                     </a>
                   </div>
                 </div>
@@ -228,53 +228,53 @@ export default function KieletPage() {
             </div>
           )}
 
-          {/* FRANCAIS */}
+          {/* Ranskankieliset palvelut */}
           {activeTab === "fr" && (
             <div className="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200 shadow-xl space-y-8 animate-fadeIn">
               <div className="flex items-center gap-3">
                 <span className="text-4xl">🇫🇷</span>
                 <div>
                   <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
-                    Soins à domicile et assistance personnelle en français
+                    Kotihoitoa ja henkilökohtaista apua ranskaksi
                   </h2>
                   <div className="text-sm text-cyan-700 font-semibold">
-                    Description complète de nos services en langue française
+                    Tietoa ranskankielisistä palveluistamme
                   </div>
                 </div>
               </div>
 
               <p className="text-slate-700 text-base leading-relaxed">
-                Sam&apos;s Care propose des services complets d&apos;aide à domicile et de soins infirmiers adaptés à la communauté francophone en Finlande. Nos soignants expérimentés interviennent avec bienveillance et professionnalisme.
+                Sam&apos;s Care tarjoaa Suomessa asuville ranskankielisille asiakkaille kotihoitoa ja kotisairaanhoitoa. Kokeneet hoitajamme työskentelevät lämminhenkisesti ja ammattitaitoisesti.
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
                 <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
-                  <h3 className="font-bold text-slate-900 text-lg">Prestations quotidiennes:</h3>
+                  <h3 className="font-bold text-slate-900 text-lg">Kotiin tuotaviin palveluihimme kuuluvat:</h3>
                   <ul className="space-y-2 text-xs sm:text-sm text-slate-700">
                     <li className="flex items-start gap-2">
                       <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                      <span><strong>Soins d&apos;hygiène quotidienne:</strong> Aide au lever, toilette, brossage des dents, soins de la peau.</span>
+                      <span><strong>Päivittäinen hygienia:</strong> Apu vuoteesta nousemisessa, peseytymisessä, hampaiden hoidossa ja ihonhoidossa.</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                      <span><strong>Nutrition et repas:</strong> Préparation des repas, hydratation, assistance pour manger si nécessaire.</span>
+                      <span><strong>Ravitsemus ja ateriat:</strong> Ruoan valmistaminen, riittävästä juomisesta huolehtiminen ja tarvittaessa ruokailussa avustaminen.</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                      <span><strong>Médicaments:</strong> Prise sous contrôle, injections, pansements et suivi des constantes.</span>
+                      <span><strong>Lääkehoito:</strong> Lääkkeiden ottamisen seuranta, pistokset, haavojen sidonta ja voinnin seuranta.</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                      <span><strong>Aide ménagère:</strong> Aspiration, lessive, rangement et courses de proximité.</span>
+                      <span><strong>Kotiaskareet:</strong> Imurointi, pyykinpesu, järjestely ja lähiympäristön asiointiapu.</span>
                     </li>
                   </ul>
                 </div>
 
                 <div className="p-6 rounded-2xl bg-cyan-50 border border-cyan-100 flex flex-col justify-between space-y-4">
                   <div>
-                    <h3 className="font-bold text-cyan-950 text-lg">Demandez une visite gratuite</h3>
+                    <h3 className="font-bold text-cyan-950 text-lg">Pyydä maksutonta kartoituskäyntiä</h3>
                     <p className="text-xs text-cyan-800 leading-relaxed mt-1">
-                      Nous venons vous rencontrer sans aucun engagement pour évaluer vos besoins. Déductible d&apos;impôts finlandais à 60% (kotitalousvähennys).
+                      Tulemme tapaamaan sinua ja arvioimaan palvelutarpeesi maksutta ja ilman sitoumuksia. Palvelut voivat oikeuttaa Suomen kotitalousvähennykseen ehtojen mukaisesti.
                     </p>
                   </div>
                   <div className="space-y-2 pt-2">
@@ -283,7 +283,7 @@ export default function KieletPage() {
                       className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-cyan-700 hover:bg-cyan-800 text-white font-bold text-sm shadow-md transition-colors"
                     >
                       <MessageSquare className="w-4 h-4" />
-                      <span>Contact par email: info@samscare.fi</span>
+                      <span>Ota yhteyttä sähköpostitse: info@samscare.fi</span>
                     </a>
                   </div>
                 </div>
@@ -291,53 +291,53 @@ export default function KieletPage() {
             </div>
           )}
 
-          {/* ESPANOL */}
+          {/* Espanjankieliset palvelut */}
           {activeTab === "es" && (
             <div className="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200 shadow-xl space-y-8 animate-fadeIn">
               <div className="flex items-center gap-3">
                 <span className="text-4xl">🇪🇸</span>
                 <div>
                   <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
-                    Servicios de atención domiciliaria y enfermería en español
+                    Kotihoitoa ja sairaanhoitoa espanjaksi
                   </h2>
                   <div className="text-sm text-cyan-700 font-semibold">
-                    Cuidado profesional con calidez y cercanía humana
+                    Ammattitaitoista ja lämminhenkistä hoivaa
                   </div>
                 </div>
               </div>
 
               <p className="text-slate-700 text-base leading-relaxed">
-                En Sam&apos;s Care ofrecemos cuidados a domicilio en español con los más altos estándares de calidad finlandeses. Cuidamos a nuestros pacientes como a nuestra propia familia, respetando sus costumbres y su lengua materna.
+                Sam&apos;s Care tarjoaa Suomessa asuville espanjankielisille asiakkaille kotihoitoa ja kotisairaanhoitoa. Huolehdimme asiakkaistamme lämpimästi ja ammattitaitoisesti sekä kunnioitamme heidän tapojaan ja äidinkieltään.
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
                 <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
-                  <h3 className="font-bold text-slate-900 text-lg">Nuestros servicios a domicilio:</h3>
+                  <h3 className="font-bold text-slate-900 text-lg">Kotiin tuotaviin palveluihimme kuuluvat:</h3>
                   <ul className="space-y-2 text-xs sm:text-sm text-slate-700">
                     <li className="flex items-start gap-2">
                       <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                      <span><strong>Cuidado personal e higiene:</strong> Ducha, lavado, vestirse, hidratación y cuidado de la piel.</span>
+                      <span><strong>Henkilökohtainen hoiva ja hygienia:</strong> Suihku ja peseytyminen, pukeutuminen, riittävästä juomisesta huolehtiminen ja ihonhoito.</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                      <span><strong>Enfermería y medicación:</strong> Toma de medicinas controlada, inyecciones, curas de heridas.</span>
+                      <span><strong>Sairaanhoito ja lääkehoito:</strong> Lääkkeiden ottamisen seuranta, pistokset ja haavahoito.</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                      <span><strong>Alimentación y tareas:</strong> Preparación de comidas saludables, compras y orden en el hogar.</span>
+                      <span><strong>Ruokailu ja kotiaskareet:</strong> Terveellisten aterioiden valmistus, kaupassa käynti ja kodin järjestely.</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                      <span><strong>Acompañamiento:</strong> Visitas médicas, paseos y conversación tranquila sin prisas.</span>
+                      <span><strong>Seura ja saattaminen:</strong> Lääkärikäynnit, ulkoilu ja kiireetön keskustelu.</span>
                     </li>
                   </ul>
                 </div>
 
                 <div className="p-6 rounded-2xl bg-cyan-50 border border-cyan-100 flex flex-col justify-between space-y-4">
                   <div>
-                    <h3 className="font-bold text-cyan-950 text-lg">Solicite una visita sin costo</h3>
+                    <h3 className="font-bold text-cyan-950 text-lg">Pyydä maksutonta kartoituskäyntiä</h3>
                     <p className="text-xs text-cyan-800 leading-relaxed mt-1">
-                      Conozca a nuestros enfermeros en una visita de valoración gratuita en su propio domicilio.
+                      Tutustu hoitajiimme maksuttomalla palvelutarpeen arviointikäynnillä omassa kodissasi.
                     </p>
                   </div>
                   <div className="space-y-2 pt-2">
@@ -346,7 +346,7 @@ export default function KieletPage() {
                       className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-cyan-700 hover:bg-cyan-800 text-white font-bold text-sm shadow-md transition-colors"
                     >
                       <Phone className="w-4 h-4" />
-                      <span>Llámenos: +358 44 793 7886</span>
+                      <span>Soita meille: +358 44 793 7886</span>
                     </a>
                   </div>
                 </div>

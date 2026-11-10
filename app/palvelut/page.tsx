@@ -10,72 +10,70 @@ import {
   CheckCircle2 
 } from "lucide-react";
 import QuickConsultationForm from "@/components/QuickConsultationForm";
+import { palvelutSEO } from "@/seo";
 
-export const metadata = {
-  title: "Services | Sam's Care Oy - Comprehensive Home Care & Nursing in Finland",
-  description: "Explore our full range of care services: Home Care, Home Nursing, Personal Assistance, and Municipal Service Vouchers in the Uusimaa region.",
-};
+export const metadata = palvelutSEO;
 
 export default function PalvelutPage() {
   const serviceList = [
     {
-      title: "Home Care",
+      title: "Kotihoito",
       href: "/palvelut/kotihoito",
       icon: HeartHandshake,
       color: "from-cyan-600 to-teal-600",
-      intro: "Compassionate support to live comfortably and safely at home.",
-      details: "Home care is tailored for seniors, substitute care for family caregivers, individuals recovering from illness or surgery, and mental health rehabilitation. We work closely with municipal healthcare teams.",
+      intro: "Lämminhenkistä tukea turvalliseen ja hyvään arkeen kotona.",
+      details: "Kotihoito suunnitellaan ikääntyneiden, omaishoitajien sijaishoitoa tarvitsevien, sairaudesta tai leikkauksesta toipuvien sekä mielenterveyskuntoutujien tarpeisiin. Teemme tiivistä yhteistyötä kuntien kotihoidon kanssa.",
       items: [
-        "Morning routines, dressing, and personal hygiene assistance",
-        "Nutritious meal preparation and dining support",
-        "Grocery shopping, errands, pharmacy, and outdoor walks",
-        "Companionship, meaningful conversation, and mental stimulation",
-        "Health monitoring, safety assurance, and family updates"
+        "Aamuaskareet, pukeutuminen ja henkilökohtaisesta hygieniasta huolehtiminen",
+        "Ravitsevien aterioiden valmistus ja ruokailussa avustaminen",
+        "Ruoka- ja apteekkiasiointi sekä ulkoilu",
+        "Seura, keskustelu ja mielekäs yhdessä tekeminen",
+        "Voinnin seuranta, turvallisuudesta huolehtiminen ja yhteydenpito omaisiin"
       ]
     },
     {
-      title: "Home Nursing",
+      title: "Kotisairaanhoito",
       href: "/palvelut/kotisairaanhoito",
       icon: Stethoscope,
       color: "from-blue-600 to-cyan-600",
-      intro: "Clinical procedures in the comfort of your own home.",
-      details: "Our licensed registered nurses visit your home to carry out medical procedures calmly, respectfully, and with clinical excellence, saving you stressful trips to clinics.",
+      intro: "Ammattitaitoista sairaanhoitoa tutussa kotiympäristössä.",
+      details: "Sairaanhoitajamme toteuttavat tarvittavat hoitotoimenpiteet kotonasi rauhallisesti, kunnioittavasti ja ammattitaidolla. Näin vältyt ylimääräisiltä ja kuormittavilta matkoilta vastaanotolle.",
       items: [
-        "Medication dosing, administration, and injections",
-        "Wound management, dressing changes, and suture removal",
-        "In-home blood draws and rapid lab diagnostics",
-        "Blood pressure, glucose, and vital sign monitoring",
-        "Catheterization and post-surgical recovery care",
-        "Palliative care and compassionate end-of-life support"
+        "Lääkehoito, lääkkeiden antaminen ja pistokset",
+        "Haavahoito, sidosten vaihto ja ompeleiden poisto",
+        "Verinäytteiden otto ja pikatestit kotona",
+        "Verenpaineen, verensokerin ja peruselintoimintojen seuranta",
+        "Katetrointi ja leikkauksesta toipumisen tuki",
+        "Palliatiivinen hoito ja saattohoidon tuki"
       ]
     },
     {
-      title: "Personal Assistance",
+      title: "Henkilökohtainen apu",
       href: "/palvelut/henkilokohtainen-apu",
       icon: UserCheck,
       color: "from-teal-600 to-emerald-600",
-      intro: "Support under the Disability Services Act where you stay in control.",
-      details: "You decide who assists you. Sam's Care acts as the responsible employer partner, taking care of payroll, insurance, and substitute arrangements so you can live independently without paperwork.",
+      intro: "Vammaispalvelulain mukaista apua, jossa sinä päätät.",
+      details: "Sinä päätät, kuka sinua avustaa. Sam's Care toimii vastuullisena työnantajakumppanina ja huolehtii palkanmaksusta, vakuutuksista ja sijaisjärjestelyistä, jotta voit elää itsenäisesti ilman työnantajavelvoitteiden paperitöitä.",
       items: [
-        "Assistance with daily activities at home and outdoors",
-        "Support in the workplace and educational institutions",
-        "Hobbies, cultural events, and social participation",
-        "Careful matching of assistant personality and client needs",
-        "Always 100% free of charge for eligible clients"
+        "Avustaminen päivittäisissä toimissa kotona ja kodin ulkopuolella",
+        "Tuki työssä ja opiskelussa",
+        "Harrastukset, kulttuuritapahtumat ja sosiaalinen osallistuminen",
+        "Avustajan sovittaminen asiakkaan toiveisiin ja tarpeisiin",
+        "Palvelu on asiakkaalle maksutonta päätöksen mukaisesti"
       ]
     },
     {
-      title: "Service Vouchers (Palveluseteli)",
+      title: "Palveluseteli",
       href: "/palvelut/palveluseteli",
       icon: Ticket,
       color: "from-amber-500 to-orange-600",
-      intro: "Utilize your municipal wellbeing services county voucher.",
-      details: "A service voucher is an official commitment from your municipality that allows you to choose Sam's Care as your private care provider. We guide you through every step at no charge.",
+      intro: "Hyödynnä hyvinvointialueesi myöntämä palveluseteli.",
+      details: "Palveluseteli on kunnan tai hyvinvointialueen myöntämä sitoumus, jonka avulla voit valita Sam's Caren palveluntuottajaksesi. Neuvomme sinua kaikissa vaiheissa maksutta.",
       items: [
-        "Approved in Western Uusimaa, Helsinki, and Vantaa-Kerava",
-        "Choose high-quality private care with familiar nurses",
-        "Any co-payment portion is eligible for a 60% tax deduction",
-        "Free voucher advisory and guidance service"
+        "Palveluntuottajana Länsi-Uudellamaalla, Helsingissä ja Vantaa-Keravalla",
+        "Valitse laadukasta hoivaa tutuilta hoitajilta",
+        "Palvelusetelin omavastuuosuus voi oikeuttaa kotitalousvähennykseen",
+        "Maksutonta neuvontaa ja opastusta palvelusetelin käyttöön"
       ]
     }
   ];
@@ -87,7 +85,7 @@ export default function PalvelutPage() {
         <div className="absolute inset-0">
           <Image
             src="/Images/Services%20image1.png"
-            alt="Our care services supporting independent living"
+            alt="Itsenäistä arkea tukevat hoivapalvelumme"
             fill
             className="page-header-image h-full w-full object-cover"
           />
@@ -97,13 +95,13 @@ export default function PalvelutPage() {
         <div className="relative z-10 mx-auto flex min-h-[360px] max-w-7xl items-center justify-center px-4 py-12 text-center sm:px-6 lg:px-8 lg:py-20">
           <div className="max-w-3xl space-y-5">
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 text-slate-100 text-xs font-semibold uppercase tracking-wider border border-white/20 backdrop-blur-sm">
-              Comprehensive In-Home Care
+              Monipuoliset kotiin tuotavat palvelut
             </span>
             <h1 className="text-3xl sm:text-5xl font-black tracking-tight text-[#62ddc9] leading-tight">
-              Our Care Services Supporting Independent Living
+              Palvelumme tukevat itsenäistä arkea
             </h1>
             <p className="mx-auto max-w-2xl text-base text-slate-100 sm:text-lg">
-              Sam&apos;s Care brings a full spectrum of home care, rehabilitation, and clinical nursing to your doorstep. Familiar nurses, unhurried visits, and multilingual support ensure the highest standard of care.
+              Tervetuloa tutustumaan Sam&apos;s Caren monipuoliseen sosiaali- ja terveyspalveluvalikoimaan. Sam&apos;s Care tuo asiakkaan kotiin kattavan hoiva-, kuntoutus- ja tukipalveluiden kirjon. Tarjoamme myös kunnille ja yrityksille vastaanottopalveluita sekä räätälöityjä ratkaisuja. Palveluidemme piiriin voi hakeutua suoraan tai oman kunnan kautta palvelusetelillä sekä ostopalveluna. Ota yhteyttä niin löydämme yhdessä joustavan palveluratkaisun yksilölliseen tilanteeseesi.
             </p>
           </div>
         </div>
@@ -140,7 +138,7 @@ export default function PalvelutPage() {
 
                   <div className="space-y-2.5 pt-2">
                     <div className="text-xs font-bold uppercase tracking-wider text-slate-400">
-                      Service includes:
+                      Palveluun voi sisältyä:
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                       {srv.items.map((it, i) => (
@@ -156,13 +154,13 @@ export default function PalvelutPage() {
                 <div className="lg:col-span-5 bg-slate-50 rounded-2xl p-6 sm:p-8 border border-slate-200/70 flex flex-col justify-between space-y-6">
                   <div>
                     <span className="text-xs font-bold text-slate-500 uppercase tracking-wider block mb-1">
-                      How to get started?
+                      Näin pääset alkuun
                     </span>
                     <h3 className="text-lg font-bold text-slate-900 mb-2">
-                      Free Consultation or Inquiry
+                      Maksuton kartoitus tai yhteydenotto
                     </h3>
                     <p className="text-xs text-slate-600 leading-relaxed">
-                      Let&apos;s discuss your needs or those of your family. You can purchase services privately or with municipal service vouchers.
+                      Keskustellaan sinun tai läheisesi tarpeista. Voit hankkia palvelut itse maksaen, palvelusetelillä tai ostopalveluna.
                     </p>
                   </div>
 
@@ -171,7 +169,7 @@ export default function PalvelutPage() {
                       href={srv.href}
                       className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm shadow-md transition-colors"
                     >
-                      <span>Read detailed service info</span>
+                      <span>Lue lisää palvelusta</span>
                       <ArrowRight className="w-4 h-4 text-cyan-400" />
                     </Link>
 
@@ -179,7 +177,7 @@ export default function PalvelutPage() {
                       href="/ajanvaraus"
                       className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-cyan-600 hover:bg-cyan-700 text-white font-bold text-sm shadow-md transition-colors"
                     >
-                      <span>Book Free Consultation</span>
+                      <span>Varaa maksuton kartoituskäynti</span>
                     </Link>
                   </div>
                 </div>

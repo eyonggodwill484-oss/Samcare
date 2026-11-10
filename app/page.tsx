@@ -7,6 +7,9 @@ import HeroSlideshow from '@/components/HeroSlideshow';
 import HomeHeroText from '@/components/HomeHeroText';
 import ScrollReveal from '@/components/ScrollReveal';
 import Button from '@/components/Button';
+import { homeSEO } from '@/seo';
+
+export const metadata = homeSEO;
 
 export default function Home() {
   return (
@@ -24,14 +27,14 @@ export default function Home() {
       </section>
 
       <section
-        aria-label="Languages we serve in"
+        aria-label="Kielet, joilla palvelua tarjotaan"
         className="bg-[#045184] text-white"
       >
         <div className="mx-auto flex max-w-7xl flex-col gap-4 px-5 py-7 sm:px-8 sm:py-8 md:flex-row md:items-center lg:px-12">
           <div className="flex shrink-0 items-center gap-3 md:w-[250px]">
             <Globe aria-hidden="true" className="size-7 shrink-0 text-[#62ddc9]" />
             <p className="text-base font-semibold sm:text-lg md:max-w-[185px]">
-              We offer our services in
+              Tarjoamme palveluitamme
             </p>
           </div>
           <div className="language-marquee min-w-0 flex-1" aria-hidden="false">
@@ -43,11 +46,11 @@ export default function Home() {
                   aria-hidden={copy === 1 ? 'true' : undefined}
                 >
                   {[
-                    { name: 'Finnish', flag: '🇫🇮' },
-                    { name: 'Swedish', flag: '🇸🇪' },
-                    { name: 'English', flag: '🇬🇧' },
-                    { name: 'French', flag: '🇫🇷' },
-                    { name: 'Spanish', flag: '🇪🇸' },
+                    { name: 'suomeksi', flag: '🇫🇮' },
+                    { name: 'ruotsiksi', flag: '🇸🇪' },
+                    { name: 'englanniksi', flag: '🇬🇧' },
+                    { name: 'ranskaksi', flag: '🇫🇷' },
+                    { name: 'espanjaksi', flag: '🇪🇸' },
                   ].map(({ name, flag }) => (
                       <li
                         key={name}
@@ -75,7 +78,7 @@ export default function Home() {
             >
               <Image
                 src="/Images/hero-1.png"
-                alt="Caregiver and client talking together at home"
+                alt="Hoitaja ja asiakas keskustelevat kotona"
                 fill
                 sizes="(max-width: 1023px) 100vw, 50vw"
                 className="object-cover"
@@ -88,26 +91,25 @@ export default function Home() {
               delay={120}
             >
               <span className="mb-3 inline-flex items-center gap-1.5 rounded-full bg-teal-100 px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-teal-800">
-                Care that fits your life
+                Hoiva, joka sopii elämääsi
               </span>
               <h2 className="text-4xl font-bold leading-[1.1] tracking-[-0.035em] text-slate-900 sm:text-5xl">
-                Services
+                Palvelut
               </h2>
               <p className="mt-5 text-base leading-7 text-slate-600 sm:text-lg sm:leading-8">
-                Welcome to Sam&apos;s Care&apos;s diverse range of social and
-                health services. Sam&apos;s Care brings a comprehensive range of
-                care, rehabilitation and support services to the customer&apos;s
-                home. We also offer reception services and tailored solutions to
-                municipalities and companies. You can apply for our services
-                directly or through your own municipality with a service voucher
-                or as a purchase service. Contact us and together we will find a
-                flexible service solution for your individual situation.
+                Tervetuloa Sam&apos;s Care -palveluiden monipuoliseen valikoimaan.
+                Tarjoamme laaja-alaisia sosiaali- ja terveyspalveluita asiakkaan
+                kotona. Palveluihimme kuuluvat myös vastaanottopalvelut ja
+                kuntien sekä yritysten tarpeisiin räätälöidyt ratkaisut. Voit
+                hakea palveluitamme suoraan tai oman kuntasi kautta palvelusetelillä
+                tai ostopalveluna. Ota yhteyttä, niin etsimme yhdessä sinulle
+                sopivan ja joustavan palveluratkaisun.
               </p>
               <Button
                 href="/palvelut"
                 className="mt-7 rounded-md"
               >
-                Explore our services
+                Tutustu palveluihin
                 <ArrowRight aria-hidden="true" className="size-4" />
               </Button>
             </ScrollReveal>
@@ -125,32 +127,31 @@ export default function Home() {
               direction="left"
             >
               <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-teal-100 text-teal-800 text-xs font-semibold uppercase tracking-wider">
-                Domiciliary care
+                Kotihoito
               </span>
               <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-slate-900 leading-tight">
-                Home care that supports everyday life
+                Kotihoito tukee arkea
               </h2>
               <p className="text-slate-600 text-base leading-relaxed">
-                Home care is suitable not only for the elderly but also for
-                substitute caregivers, people in mental health and substance
-                abuse rehabilitation, people with disabilities, and those
-                recovering from illness or surgery. We cooperate with municipal
-                home care.
+                Kotihoito sopii paitsi ikäihmisille myös korvaaville omaisille,
+                mielenterveys- ja päihdehoidossa oleville, vammaisille sekä
+                sairauden tai leikkauksen jälkeen toipuville. Teemme yhteistyötä
+                kunnan kotihoidon kanssa.
               </p>
               <p className="text-slate-600 text-base leading-relaxed">
-                A home is precious, which is why our service aims to support
-                customers living at home and coping with everyday life through
-                a diverse range of care and rehabilitation services. Sam&apos;s
-                Care home care services are tailored to each customer&apos;s
-                individual needs, and our professional caregivers are available
-                24/7, for both temporary and long-term needs. Contact us and we
-                will find a service solution that is right for your situation.
+                Koti on arvokas, joten palvelumme tavoitteena on tukea kotona
+                asuvien asiakkaiden arkea ja selviytymistä monipuolisten hoito- ja
+                kuntoutuspalveluiden avulla. Sam&apos;s Care -kotihoitopalvelut on
+                räätälöity jokaisen asiakkaan tarpeiden mukaan, ja ammattitaitoiset
+                hoitajat ovat tavoitettavissa ympäri vuorokauden sekä lyhytaikaisiin
+                että pitkäaikaisiin tarpeisiin. Ota yhteyttä, niin löydämme juuri
+                sinun tilanteeseesi sopivan palveluratkaisun.
               </p>
               <p className="text-sm font-semibold text-slate-500">
-                Sam&apos;s Care Ltd
+                Sam&apos;s Care Oy
               </p>
               <Button href="/ota-yhteytta" className="rounded-md">
-                Contact us
+                Ota yhteyttä
                 <ArrowRight aria-hidden="true" className="size-4" />
               </Button>
             </ScrollReveal>
@@ -164,7 +165,7 @@ export default function Home() {
               <div className="relative aspect-[4/3] overflow-hidden rounded-3xl shadow-[0_28px_70px_-18px_rgba(4,81,132,0.42)] ring-1 ring-cyan-800/10 group sm:aspect-[16/10]">
                 <Image
                   src="/Images/personalcare.png"
-                  alt="Caregiver providing home care to an older adult"
+                  alt="Hoitaja tarjoaa kotihoitoa ikääntyneelle"
                   fill
                   sizes="(max-width: 1023px) 100vw, 58vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -178,7 +179,7 @@ export default function Home() {
       <section className="relative isolate overflow-hidden bg-[#102c3b] text-white">
         <Image
           src="/Images/belowfooter.png"
-          alt="A caregiver spending time with a client at home"
+          alt="Hoitaja viettää aikaa asiakkaan kanssa kotona"
           fill
           sizes="100vw"
           className="object-cover object-center"
@@ -190,28 +191,28 @@ export default function Home() {
         <ScrollReveal className="relative mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-12 lg:py-24" direction="left">
           <div className="max-w-3xl space-y-5">
             <span className="inline-flex items-center gap-1.5 rounded-full bg-teal-100 px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-teal-800">
-              Familiar caregivers, unhurried visits
+              Hoitoa, jossa sinulle on aikaa
             </span>
             <h2 className="text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
-              Care that makes time for you
+              Hoitoa, jossa sinulle on aikaa
             </h2>
             <p className="text-base leading-relaxed text-white/90 sm:text-lg">
-              Two of the things home care clients value most are familiar
-              caregivers and visits that aren&apos;t rushed. Your regular
-              caregiver has time not only to help, but also to sit down and
-              share a conversation.
+              Kotihoidon asiakkaat arvostavat erityisesti kahta asiaa: tuttuja
+              hoitajia ja kiireettömiä hoitokäyntejä. Oma tuttu hoitajasi ei
+              ainoastaan auta sinua päivittäisissä tarpeissasi, vaan hänellä on
+              myös aikaa istahtaa alas ja vaihtaa kanssasi kuulumisia.
             </p>
             <p className="text-base leading-relaxed text-white/90 sm:text-lg">
-              Our nurses don&apos;t hurry off to the next appointment. Spending
-              time with you and talking through the small and important things
-              are part of the care we provide. Many clients tell us how much
-              they appreciate longer, more relaxed visits.
+              Hoitajamme eivät kiirehdi seuraavaan tapaamiseen. Sinun kanssasi
+              vietetty aika ja keskustelu niin pienistä kuin tärkeistäkin asioista
+              ovat olennainen osa tarjoamaamme hoitoa. Monet asiakkaamme kertovat
+              arvostavansa erityisesti pidempiä ja rauhallisempia hoitokäyntejä.
             </p>
             <p className="text-base leading-relaxed text-white/90 sm:text-lg">
-              We want you to feel cared for and your family to feel confident
-              that you&apos;re in the hands of trusted professionals. With
-              reliable, familiar support, there&apos;s time to focus on what
-              matters to you.
+              Haluamme, että tunnet olosi huolehdituksi ja että perheesi voi
+              luottaa siihen, että olet turvallisissa ja ammattitaitoisissa
+              käsissä. Luotettavan ja tutun tuen avulla jää enemmän aikaa
+              keskittyä siihen, mikä on sinulle elämässä tärkeintä.
             </p>
           </div>
         </ScrollReveal>
@@ -232,15 +233,15 @@ export default function Home() {
             {/* Consultation Details */}
             <ScrollReveal className="lg:col-span-5 space-y-6" direction="left">
               <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-cyan-100 text-cyan-800 text-xs font-semibold uppercase tracking-wider">
-                Getting Started is Simple
+                Aloitus on helppoa
               </span>
               <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-slate-900 leading-tight">
-                Complimentary In-Home Care Consultation
+                Maksuton kartoituskäynti kotona
               </h2>
               <p className="text-slate-600 text-base leading-relaxed">
-                Care needs can arise unexpectedly following surgery or develop
-                gradually with age. Our free assessment visit is completely
-                non-binding:
+                Hoitotarpeet voivat syntyä yllättäen leikkauksen jälkeen tai
+                kehittyä vähitellen iän myötä. Maksuton kartoituskäyntimme on
+                täysin sitoutumaton:
               </p>
 
               <div className="space-y-4">
@@ -250,11 +251,11 @@ export default function Home() {
                   </div>
                   <div>
                     <strong className="text-slate-900 text-sm block">
-                      Meeting & Needs Assessment:
+                      Tutustuminen ja tarpeen arviointi:
                     </strong>
                     <span className="text-slate-600 text-xs sm:text-sm">
-                      Our head nurse visits your home to listen to your
-                      preferences, daily routines, and health status.
+                      Hoitaja käy kotonasi kuuntelemassa toiveitasi, päivittäisiä
+                      rutiinejasi ja terveydentilaasi.
                     </span>
                   </div>
                 </div>
@@ -265,11 +266,11 @@ export default function Home() {
                   </div>
                   <div>
                     <strong className="text-slate-900 text-sm block">
-                      Personalized Care Plan:
+                      Henkilökohtainen hoitosuunnitelma:
                     </strong>
                     <span className="text-slate-600 text-xs sm:text-sm">
-                      We provide a transparent proposal outlining visit content,
-                      schedule, and your designated personal nurse.
+                      Annamme selkeän ehdotuksen käyntien sisällöstä, aikataulusta
+                      ja nimetyistä hoitajista.
                     </span>
                   </div>
                 </div>
@@ -280,11 +281,11 @@ export default function Home() {
                   </div>
                   <div>
                     <strong className="text-slate-900 text-sm block">
-                      Vouchers & Tax Benefits Guidance:
+                      Palvelusetelit ja verohyödyt:
                     </strong>
                     <span className="text-slate-600 text-xs sm:text-sm">
-                      We walk you through municipal subsidies and make all costs
-                      clear from day one.
+                      Käymme yhdessä läpi kuntatukea ja selvitämme kaikki kustannukset
+                      alusta asti.
                     </span>
                   </div>
                 </div>
@@ -294,7 +295,7 @@ export default function Home() {
               <div className="p-5 rounded-2xl bg-cyan-900 text-white flex items-center justify-between gap-4 shadow-lg">
                 <div>
                   <div className="text-xs text-cyan-200 uppercase font-semibold">
-                    Prefer to speak with a nurse immediately?
+                    Haluatko puhua hoitajalle heti?
                   </div>
                   <div className="text-lg font-extrabold text-white mt-0.5">
                     050 555 1187
@@ -304,7 +305,7 @@ export default function Home() {
                   href="tel:0505551187"
                   className="px-4 py-2 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-xs"
                 >
-                  Call Now
+                  Soita nyt
                 </a>
               </div>
             </ScrollReveal>
@@ -312,8 +313,8 @@ export default function Home() {
             {/* Consultation Form Component */}
             <div className="lg:col-span-7">
               <QuickConsultationForm
-                title="Book a Free Care Consultation"
-                subtitle="Fill out the form and our head nurse will get back to you within 24 hours."
+                title="Varaa maksuton kartoituskäynti"
+                subtitle="Täytä lomake, niin johtava hoitajamme ottaa sinuun yhteyttä 24 tunnin sisällä."
               />
             </div>
           </div>
@@ -324,8 +325,8 @@ export default function Home() {
       <section className="relative overflow-hidden bg-[#045184] py-20 text-white">
         <div className="pointer-events-none absolute inset-0">
           <Image
-            src="/Images/below-footer.png"
-            alt="Sam's Care service area in Uusimaa Finland"
+            src="/Images/belowfooter.png"
+            alt="Sam's Caren palvelualue Uudellamaalla"
             fill
             className="object-cover object-center"
           />
@@ -338,14 +339,14 @@ export default function Home() {
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <ScrollReveal className="text-center max-w-3xl mx-auto mb-16 space-y-3">
             <span className="inline-flex items-center gap-1.5 rounded-full bg-teal-100 px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-teal-800">
-              Service Areas in Finland
+              Palvelualueet Suomessa
             </span>
             <h2 className="text-3xl sm:text-4xl font-black text-white">
-              Serving the Entire Uusimaa Region
+              Palvelemme koko Uudenmaan aluetta
             </h2>
             <p className="text-slate-300 text-base">
-              Our regional offices and mobile nursing teams provide
-              comprehensive in-home care in the following municipalities:
+              Alueelliset toimipisteemme ja mobiilit hoitotiimimme tarjoavat
+              kattavaa kotihoitoa seuraavissa kunnissa:
             </p>
           </ScrollReveal>
 

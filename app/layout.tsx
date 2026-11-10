@@ -19,40 +19,33 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.samscare.fi'),
-  title: "Sam's Care Oy | Compassionate & Reliable Home Care in Finland",
+  title: "Sam's Care Oy | Luotettava kotihoito Suomessa",
   description:
-    "Sam's Care Oy provides high-quality, unhurried home care, home nursing, and personal assistance across Espoo, Helsinki, Lohja, and the Uusimaa region. Familiar nurses and caring support.",
+    "Sam's Care Oy tarjoaa rauhallista ja laadukasta kotihoitoa, kotisairaanhoitoa ja henkilökohtaista tukea Espoossa, Helsingissä, Lohjalla ja laajemmalla Uudenmaan alueella.",
   keywords: [
-    'home care Finland',
-    'home nursing Espoo',
-    'personal assistance Finland',
-    'elderly care Helsinki',
-    'service voucher',
+    'kotihoito Suomi',
+    'kotisairaanhoito Espoo',
+    'henkilökohtainen apu',
+    'ikääntyneiden hoito Helsinki',
     'palveluseteli',
+    'kotihoito Lohja',
     'kotitalousvähennys',
     "Sam's Care",
   ],
   authors: [{ name: "Sam's Care Oy" }],
   icons: {
-    icon: '/Images/logo.avif',
-    apple: '/Images/logo.avif',
+    icon: '/Images/Logo.png',
+    apple: '/Images/Logo.png',
   },
   openGraph: {
-    title: "Sam's Care Oy | Compassionate & Reliable Home Care in Finland",
+    title: "Sam's Care Oy | Luotettava kotihoito Suomessa",
     description:
-      'Familiar personal nurses, unhurried home visits, and personalized healthcare services across Uusimaa, Finland.',
+      'Tutut hoitajat, rauhalliset kotikäynnit ja henkilökohtainen hoiva koko Uudenmaan alueella Suomessa.',
     url: 'https://www.samscare.fi',
     siteName: "Sam's Care Oy",
-    locale: 'en_US',
+    locale: 'fi_FI',
     type: 'website',
-    images: [
-      {
-        url: '/Images/hero-1.png',
-        width: 1905,
-        height: 760,
-        alt: "Sam's Care Home Care",
-      },
-    ],
+    images: [{ url: '/Images/hero-1.png', alt: "Sam's Care kotihoito" }],
   },
 };
 
@@ -62,7 +55,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn("scroll-smooth", poppins.variable, "font-sans", inter.variable)}>
+    <html lang="fi" className={cn("scroll-smooth", poppins.variable, "font-sans", inter.variable)}>
       <body className="min-h-screen flex flex-col bg-white text-brand-black antialiased selection:bg-brand-turquoise selection:text-brand-black">
         <Navbar />
         <main className="flex-1">

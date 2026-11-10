@@ -10,6 +10,7 @@ import {
   Clock,
   GraduationCap
 } from "lucide-react";
+import { createMailtoLink } from "@/lib/mailto";
 
 export default function HaeTyotaPage() {
   const [submitted, setSubmitted] = useState(false);
@@ -24,6 +25,22 @@ export default function HaeTyotaPage() {
     workload: "osa-aikainen",
     message: "",
   });
+  const mailtoLink = createMailtoLink(
+    "Työhakemus Sam's Carelle",
+    [
+      `Nimi: ${formData.name}`,
+      `Sähköposti: ${formData.email}`,
+      `Puhelinnumero: ${formData.phone}`,
+      `Koulutus tai ammattinimike: ${formData.title}`,
+      `Apotti-osaaminen: ${formData.apotti}`,
+      `Lääkehoitolupa (LOVe): ${formData.love}`,
+      `Toivottu työalue: ${formData.city}`,
+      `Työaikatoive: ${formData.workload}`,
+      "",
+      "Tausta ja toiveet:",
+      formData.message || "Ei lisätietoja",
+    ].join("\n"),
+  );
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -37,7 +54,7 @@ export default function HaeTyotaPage() {
         <div className="absolute inset-0">
           <Image
             src="/Images/Services%20image1.png"
-            alt="Join the Sam's Care care team"
+            alt="Liity Sam's Caren hoitotiimiin"
             fill
             className="page-header-image h-full w-full object-cover"
           />
@@ -110,8 +127,15 @@ export default function HaeTyotaPage() {
                 Kiitos hakemuksestasi, {formData.name}!
               </h2>
               <p className="text-emerald-800 text-sm max-w-md mx-auto">
-                Olemme vastaanottaneet tietosi. Rekrytointivastaavamme ottaa sinuun yhteyttä muutaman arkipäivän sisällä sopiaksemme haastattelusta!
+                Hakemusta ei lähetetty verkkosivulta. Avaa sähköpostiluonnos
+                alla ja lähetä hakemus sähköpostiohjelmastasi.
               </p>
+              <a
+                href={mailtoLink}
+                className="inline-flex items-center gap-2 rounded-xl bg-emerald-700 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-emerald-800"
+              >
+                Avaa hakemus sähköpostissa
+              </a>
             </div>
           ) : (
             <div className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-xl space-y-6">
@@ -255,7 +279,7 @@ export default function HaeTyotaPage() {
                   className="w-full py-4 px-6 rounded-xl bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-700 hover:to-cyan-700 text-white font-bold text-sm sm:text-base shadow-lg shadow-teal-700/20 transition-all flex items-center justify-center gap-2"
                 >
                   <Send className="w-4 h-4" />
-                  <span>Lähetä hakemus</span>
+                  <span>Valmistele hakemus sähköpostiin</span>
                 </button>
               </form>
             </div>

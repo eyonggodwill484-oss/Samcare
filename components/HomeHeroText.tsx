@@ -4,7 +4,7 @@ import { motion, useReducedMotion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import Button from '@/components/Button';
 
-const words = ['Do', 'you', 'need', 'help?'];
+const words = ['Tarvitsetko', 'apua?'];
 
 export default function HomeHeroText() {
   const shouldReduceMotion = useReducedMotion();
@@ -52,7 +52,7 @@ export default function HomeHeroText() {
       animate="visible"
     >
       <motion.h1
-        aria-label="Do you need help?"
+        aria-label="Tarvitsetko apua?"
         className="font-serif text-[clamp(3rem,7vw,5.75rem)] font-bold leading-[0.98] tracking-[-0.045em] text-white"
         variants={{
           hidden: {},
@@ -80,23 +80,23 @@ export default function HomeHeroText() {
         className="mt-4 text-2xl font-semibold leading-tight tracking-[-0.025em] text-[#62ddc9] sm:mt-5 sm:text-4xl"
         variants={itemVariants}
       >
-        The nurse is near you.
+        Hoitaja on lähelläsi
       </motion.p>
       <motion.p
         className="mt-5 max-w-[570px] text-base leading-relaxed text-white/85 sm:mt-6 sm:text-lg"
         variants={itemVariants}
       >
-        Unhurried home care and nursing, shaped around your needs and delivered
-        with warmth, respect and professionalism.
+        Rauhallista kotihoitoa ja hoivaa, suunniteltua juuri sinun tarpeisiisi
+        ja annettua lämpimällä, kunnioittavalla ja ammattitaitoisella tavalla.
       </motion.p>
       <motion.div variants={itemVariants}>
         <Button
-          href="/ajanvaraus"
+          href="https://www.samscare.fi/ajanvaraus"
           size="lg"
           lensEffect
           className="mt-8 rounded-md uppercase tracking-[0.08em] shadow-[0_8px_24px_rgba(0,0,0,0.2)] sm:mt-9 sm:px-9"
         >
-          Order a free survey
+          TILAA MAKSUTON KARTOITUSKÄYNTI
           <ArrowRight aria-hidden="true" className="ml-3 size-5" />
         </Button>
       </motion.div>

@@ -32,13 +32,15 @@ export default function Footer() {
           <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
             <div className="lg:col-span-8 space-y-3">
               <span className="inline-flex items-center gap-1.5 rounded-full bg-teal-100 px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-teal-800">
-                Personalized Care with Heart
+                Henkilökohtaista hoivaa sydämellä
               </span>
               <h3 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight">
-                Do you or your loved one need reliable daily care?
+                Tarvitsetko sinä tai läheisesi luotettavaa päivittäistä hoivaa?
               </h3>
               <p className="text-slate-300 text-base max-w-2xl">
-                Reach out to us anytime. We are happy to visit you for a free in-home consultation to design the ideal care and support plan.
+                Ota yhteyttä meihin milloin tahansa. Mielellämme käymme teillä
+                maksuttomassa kotikartoituksessa ja suunnittelemme juuri teille
+                sopivan hoito- ja tukisuunnitelman.
               </p>
             </div>
             <div className="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 justify-end">
@@ -47,7 +49,7 @@ export default function Footer() {
                 size="lg"
                 className="rounded-xl text-center shadow-lg"
               >
-                <span>Book Free Consultation</span>
+                <span>Varaa kartoitus</span>
                 <ChevronRight className="w-4 h-4" />
               </Button>
               <a
@@ -55,7 +57,7 @@ export default function Footer() {
                 className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 text-white font-semibold border border-slate-700 transition-all text-center"
               >
                 <Phone className="w-4 h-4 text-cyan-400" />
-                <span>Call: 050 555 1187</span>
+                <span>Soita: 050 555 1187</span>
               </a>
             </div>
           </div>
@@ -71,8 +73,8 @@ export default function Footer() {
             <Link href="/" className="inline-flex items-center gap-3">
               <div className="relative w-10 h-10 overflow-hidden rounded-xl bg-white p-1">
                 <Image 
-                  src="/Images/logo.avif" 
-                  alt="Sam's Care Oy Logo" 
+                  src="/Images/Logo.png" 
+                  alt="Sam's Care Oy:n logo" 
                   width={40} 
                   height={40} 
                   className="object-contain"
@@ -83,14 +85,16 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-blue-100 text-sm leading-relaxed">
-              Sam&apos;s Care brings comprehensive, unhurried care, rehabilitation, and home nursing directly to the client&apos;s home. Familiar personal nurses and genuine presence are the foundation of our work.
+              Sam&apos;s Care tarjoaa laaja-alaista, rauhallista hoivaa,
+              kuntoutusta ja kotihoitoa asiakkaan kotiin. Tutut hoitajat ja
+              aito läsnäolo ovat työn perustana.
             </p>
             <div className="pt-2">
               <span className="text-xs font-semibold uppercase tracking-wider text-blue-200 block mb-2">
-                Languages We Speak
+                Kielet, joilla puhumme
               </span>
               <div className="flex flex-wrap gap-2 text-xs">
-                {["English", "Suomi", "Svenska", "Français", "Español"].map((lang) => (
+                {["Englanti", "Suomi", "Ruotsi", "Ranska", "Espanja"].map((lang) => (
                   <span key={lang} className="px-2.5 py-1 rounded-md bg-white/10 text-white border border-white/20">
                     {lang}
                   </span>
@@ -102,43 +106,43 @@ export default function Footer() {
           {/* Services links */}
           <div className="lg:col-span-3 space-y-3">
             <h4 className="text-sm font-semibold uppercase tracking-wider text-white">
-              Our Services
+              Palvelut
             </h4>
             <ul className="space-y-2 text-sm text-blue-100">
               <li>
                 <Link href="/palvelut/kotihoito" className="hover:text-[#3dc9b2] transition-colors flex items-center gap-1.5">
                   <span className="text-[#3dc9b2]">•</span>
-                  <span>Home Care & Daily Living</span>
+                  <span>Kotihoito ja arjen tuki</span>
                 </Link>
               </li>
               <li>
                 <Link href="/palvelut/kotisairaanhoito" className="hover:text-[#3dc9b2] transition-colors flex items-center gap-1.5">
                   <span className="text-[#3dc9b2]">•</span>
-                  <span>Home Nursing & Medication</span>
+                  <span>Kotisairaanhoito ja lääkkeet</span>
                 </Link>
               </li>
               <li>
                 <Link href="/palvelut/henkilokohtainen-apu" className="hover:text-[#3dc9b2] transition-colors flex items-center gap-1.5">
                   <span className="text-[#3dc9b2]">•</span>
-                  <span>Personal Assistance</span>
+                  <span>Henkilökohtainen apu</span>
                 </Link>
               </li>
               <li>
                 <Link href="/palvelut/palveluseteli" className="hover:text-[#3dc9b2] transition-colors flex items-center gap-1.5">
                   <span className="text-[#3dc9b2]">•</span>
-                  <span>Service Vouchers (Palveluseteli)</span>
+                  <span>Palveluseteli</span>
                 </Link>
               </li>
               <li>
                 <Link href="/hinnasto" className="hover:text-[#3dc9b2] transition-colors flex items-center gap-1.5">
                   <span className="text-[#3dc9b2]">•</span>
-                  <span>Pricing & Service Fees</span>
+                  <span>Hinnasto ja palvelumaksut</span>
                 </Link>
               </li>
               <li>
                 <Link href="/kielet" className="hover:text-[#3dc9b2] transition-colors flex items-center gap-1.5">
                   <span className="text-[#3dc9b2]">•</span>
-                  <span>Multilingual Care</span>
+                  <span>Monikielinen hoito</span>
                 </Link>
               </li>
             </ul>
@@ -147,27 +151,27 @@ export default function Footer() {
           {/* Regional coverage & Offices */}
           <div className="lg:col-span-3 space-y-3">
             <h4 className="text-sm font-semibold uppercase tracking-wider text-white">
-              Offices & On-Call
+              Toimipisteet ja päivystys
             </h4>
             <div className="space-y-3 text-sm text-blue-100">
               <div className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-[#3dc9b2] mt-1 shrink-0" />
                 <div>
-                  <strong className="text-white block">Lohja Main Office:</strong>
+                  <strong className="text-white block">Lohjan toimisto:</strong>
                   Laurinkatu 51, 08100 Lohja
-                  <div className="text-xs text-[#3dc9b2] mt-0.5">Tel: 050 555 1187</div>
+                  <div className="text-xs text-[#3dc9b2] mt-0.5">Puh: 050 555 1187</div>
                 </div>
               </div>
               <div className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-[#3dc9b2] mt-1 shrink-0" />
                 <div>
-                  <strong className="text-white block">Espoo Office:</strong>
+                  <strong className="text-white block">Espoon toimisto:</strong>
                   Ansatie 18, 02940 Espoo
                 </div>
               </div>
               <div className="pt-2 text-xs text-blue-100">
-                <strong className="text-white block mb-1">Service Area in Finland:</strong>
-                Lohja, Espoo, Helsinki, Vantaa, Raasepori, Hanko, Inkoo and Siuntio.
+                <strong className="text-white block mb-1">Palvelualue Suomessa:</strong>
+                Lohja, Espoo, Helsinki, Vantaa, Raasepori, Hanko, Inkoo ja Siuntio.
               </div>
             </div>
           </div>
@@ -175,31 +179,31 @@ export default function Footer() {
           {/* Official Documents & Supervision */}
           <div className="lg:col-span-2 space-y-3">
             <h4 className="text-sm font-semibold uppercase tracking-wider text-white">
-              Quality & Compliance
+              Laatu ja vaatimustenmukaisuus
             </h4>
             <ul className="space-y-2 text-xs text-blue-100">
               <li>
                 <Link href="/laatu-ja-hygienia" className="hover:text-[#3dc9b2] transition-colors flex items-center gap-1">
                   <ShieldCheck className="w-3.5 h-3.5 text-[#3dc9b2]" />
-                  <span>Hygiene Protocols</span>
+                  <span>Hygieniaprotokollat</span>
                 </Link>
               </li>
               <li>
                 <Link href="/laatu-ja-hygienia" className="hover:text-[#3dc9b2] transition-colors flex items-center gap-1">
                   <FileText className="w-3.5 h-3.5 text-[#3dc9b2]" />
-                  <span>Supervision Plan (Omavalvonta)</span>
+                  <span>Omavalvontasuunnitelma</span>
                 </Link>
               </li>
               <li>
                 <Link href="/laatu-ja-hygienia" className="hover:text-[#3dc9b2] transition-colors flex items-center gap-1">
                   <FileText className="w-3.5 h-3.5 text-[#3dc9b2]" />
-                  <span>Official Inspection Report</span>
+                  <span>Virallinen tarkastuskertomus</span>
                 </Link>
               </li>
               <li>
                 <Link href="/laatu-ja-hygienia" className="hover:text-[#3dc9b2] transition-colors flex items-center gap-1">
                   <FileText className="w-3.5 h-3.5 text-[#3dc9b2]" />
-                  <span>Privacy Policy (GDPR)</span>
+                  <span>Tietosuojakäytäntö (GDPR)</span>
                 </Link>
               </li>
               <li className="pt-2">
@@ -207,7 +211,7 @@ export default function Footer() {
                   href="https://www.facebook.com/samscare.fi/" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  aria-label="Visit Sam's Care on Facebook"
+                  aria-label="Sam's Care Facebookissa"
                   className="inline-flex items-center gap-2 rounded-full border border-white/25 px-3 py-2 text-[#3dc9b2] transition-colors hover:bg-white/10 hover:text-white"
                 >
                   <svg
@@ -232,11 +236,11 @@ export default function Footer() {
         {/* Bottom copyright and legal */}
         <div className="flex flex-col items-center gap-4 pt-5 text-xs text-blue-100">
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
-            <Link href="/laatu-ja-hygienia" className="hover:text-white">Privacy Policy</Link>
-            <Link href="/laatu-ja-hygienia" className="hover:text-white">Quality Standards</Link>
-            <Link href="/hae-tyota" className="hover:text-white">Careers</Link>
+            <Link href="/laatu-ja-hygienia" className="hover:text-white">Tietosuojakäytäntö</Link>
+            <Link href="/laatu-ja-hygienia" className="hover:text-white">Laatustandardit</Link>
+            <Link href="/hae-tyota" className="hover:text-white">Työpaikat</Link>
           </div>
-          <div>&copy; 2026 Sam&apos;s Care Oy. All rights reserved.</div>
+          <div>&copy; 2026 Sam&apos;s Care Oy. Kaikki oikeudet pidätetään.</div>
         </div>
       </ScrollReveal>
     </footer>

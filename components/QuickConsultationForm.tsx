@@ -9,6 +9,7 @@ import {
 } from 'lucide-react';
 import Button from '@/components/Button';
 import ScrollReveal from '@/components/ScrollReveal';
+import { createMailtoLink } from '@/lib/mailto';
 
 export default function QuickConsultationForm({
   title,
@@ -36,12 +37,26 @@ export default function QuickConsultationForm({
     setFormData((current) => ({ ...current, [key]: value }));
   };
 
+  const mailtoLink = createMailtoLink(
+    'Hoitopalvelupyyntö Sam’s Carelle',
+    [
+      `Nimi: ${formData.name}`,
+      `Puhelinnumero: ${formData.phone}`,
+      `Sähköposti: ${formData.email || 'Ei ilmoitettu'}`,
+      `Kaupunki tai alue: ${formData.city}`,
+      `Palvelu: ${formData.service}`,
+      '',
+      'Lisätiedot:',
+      formData.message || 'Ei lisätietoja',
+    ].join('\n'),
+  );
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
     if (!formData.name.trim() || !formData.phone.trim() || !formData.consent) {
       setError(
-        'Please fill in your name, phone number, and consent to the privacy policy.',
+        'Täytä nimi, puhelinnumero ja hyväksy tietosuojakäytäntö.',
       );
       return;
     }
@@ -59,32 +74,32 @@ export default function QuickConsultationForm({
 
         <div className="mt-6 text-center">
           <p className="text-xs font-semibold uppercase tracking-[0.22em] text-emerald-700">
-            Request received
+            Sähköpostiluonnos valmis
           </p>
           <h3 className="mt-3 text-2xl font-black tracking-tight text-slate-900 sm:text-3xl">
-            Thank you, {formData.name}.
+            Kiitos, {formData.name}.
           </h3>
           <p className="mx-auto mt-3 max-w-lg text-sm leading-6 text-slate-600">
-            Your request has been received. Our care coordinator will contact
-            you soon to arrange a free home assessment and a personalised care
-            plan.
+            Verkkosivusto ei lähetä pyyntöä automaattisesti. Lähetä tiedot
+            sähköpostitse alla olevasta painikkeesta; hoitotiimimme voi vastata
+            vasta viestin saavuttua.
           </p>
         </div>
 
         <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <a
-            href="tel:0505551187"
+            href={mailtoLink}
             className="inline-flex items-center gap-2 rounded-full bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-slate-800"
           >
-            <Phone className="h-4 w-4" />
-            Call 050 555 1187
+            <HeartHandshake className="h-4 w-4" />
+            Avaa sähköpostiluonnos
           </a>
           <a
-            href="mailto:info@samscare.fi"
+            href="tel:0505551187"
             className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-slate-700 transition-colors hover:border-slate-300 hover:bg-slate-50"
           >
-            <HeartHandshake className="h-4 w-4" />
-            info@samscare.fi
+            <Phone className="h-4 w-4" />
+            Soita 050 555 1187
           </a>
         </div>
       </ScrollReveal>
@@ -100,26 +115,26 @@ export default function QuickConsultationForm({
         <div className="mb-6 flex flex-col gap-4 border-b border-slate-200 pb-5 sm:flex-row sm:items-start sm:justify-between">
           <div>
             <h3 className="text-2xl font-black tracking-tight text-slate-900">
-              {title || 'Book a free care consultation'}
+              {title || 'Varaa maksuton kartoituskäynti'}
             </h3>
           </div>
         </div>
 
         <p className="mb-6 text-sm leading-6 text-slate-600">
           {subtitle ||
-            'Tell us what kind of support you need and we will contact you to arrange a suitable home visit.'}
+            'Kerro, millaista tukea tarvitset, niin otamme sinuun yhteyttä sopivan kotikäynnin järjestämiseksi.'}
         </p>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="grid gap-4 sm:grid-cols-2">
             <div>
               <label className="mb-2 block text-[11px] font-bold uppercase tracking-[0.16em] text-slate-600">
-                Full name <span className="text-cyan-700">*</span>
+                Nimi <span className="text-cyan-700">*</span>
               </label>
               <input
                 type="text"
                 required
-                placeholder="First and last name"
+                placeholder="Etu- ja sukunimi"
                 value={formData.name}
                 onChange={(e) => updateField('name', e.target.value)}
                 className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm outline-none transition focus:border-cyan-500 focus:ring-4 focus:ring-cyan-100"
@@ -128,7 +143,7 @@ export default function QuickConsultationForm({
 
             <div>
               <label className="mb-2 block text-[11px] font-bold uppercase tracking-[0.16em] text-slate-600">
-                Phone number <span className="text-cyan-700">*</span>
+                Puhelinnumero <span className="text-cyan-700">*</span>
               </label>
               <input
                 type="tel"
@@ -144,11 +159,11 @@ export default function QuickConsultationForm({
           <div className="grid gap-4 sm:grid-cols-2">
             <div>
               <label className="mb-2 block text-[11px] font-bold uppercase tracking-[0.16em] text-slate-600">
-                Email address
+                Sähköposti
               </label>
               <input
                 type="email"
-                placeholder="your.email@example.com"
+                placeholder="sinä@email.com"
                 value={formData.email}
                 onChange={(e) => updateField('email', e.target.value)}
                 className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm outline-none transition focus:border-cyan-500 focus:ring-4 focus:ring-cyan-100"
@@ -157,7 +172,7 @@ export default function QuickConsultationForm({
 
             <div>
               <label className="mb-2 block text-[11px] font-bold uppercase tracking-[0.16em] text-slate-600">
-                City / region
+                Kaupunki / alue
               </label>
               <select
                 value={formData.city}
@@ -172,36 +187,36 @@ export default function QuickConsultationForm({
                 <option value="Hanko">Hanko</option>
                 <option value="Inkoo">Inkoo</option>
                 <option value="Siuntio">Siuntio</option>
-                <option value="Muu">Other Uusimaa</option>
+                <option value="Muu">Muu Uusimaa</option>
               </select>
             </div>
           </div>
 
           <div>
             <label className="mb-2 block text-[11px] font-bold uppercase tracking-[0.16em] text-slate-600">
-              Service needed
+              Tarvittava palvelu
             </label>
             <select
               value={formData.service}
               onChange={(e) => updateField('service', e.target.value)}
               className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm outline-none transition focus:border-cyan-500 focus:ring-4 focus:ring-cyan-100"
             >
-              <option value="home-care">Home Care</option>
-              <option value="home-nursing">Home Nursing</option>
-              <option value="personal-assistance">Personal Assistance</option>
-              <option value="service-voucher">Service Voucher</option>
-              <option value="swedish">Swedish home care</option>
-              <option value="other">Temporary or custom care</option>
+              <option value="home-care">Kotihoito</option>
+              <option value="home-nursing">Kotisairaanhoito</option>
+              <option value="personal-assistance">Henkilökohtainen apu</option>
+              <option value="service-voucher">Palveluseteli</option>
+              <option value="swedish">Ruotsinkielinen kotihoito</option>
+              <option value="other">Tilapäinen tai räätälöity hoito</option>
             </select>
           </div>
 
           <div>
             <label className="mb-2 block text-[11px] font-bold uppercase tracking-[0.16em] text-slate-600">
-              Details
+              Lisätiedot
             </label>
             <textarea
               rows={4}
-              placeholder="Share any needs, preferences, or times that suit you best..."
+              placeholder="Kerro tarpeistasi, mieltymyksistäsi tai sopivista ajoista..."
               value={formData.message}
               onChange={(e) => updateField('message', e.target.value)}
               className="w-full resize-none rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm outline-none transition focus:border-cyan-500 focus:ring-4 focus:ring-cyan-100"
@@ -221,8 +236,8 @@ export default function QuickConsultationForm({
               htmlFor="form-consent"
               className="text-xs leading-5 text-slate-600"
             >
-              I accept that my contact information may be processed for this
-              care request. We will never share your details with third parties.
+              Hyväksyn, että yhteystietojani voidaan käsitellä tätä hoitopyyntöä
+              varten. Emme jaa tietojasi kolmansille osapuolille.
             </label>
           </div>
 
@@ -237,7 +252,7 @@ export default function QuickConsultationForm({
               type="submit"
               className="rounded-full"
             >
-              Send request
+              Valmistele sähköpostipyyntö
               <ArrowRight className="h-4 w-4" />
             </Button>
           </div>

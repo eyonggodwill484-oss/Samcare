@@ -25,28 +25,26 @@ interface Language {
 }
 
 const LANGUAGES: Language[] = [
-  { code: "en", name: "English", nativeName: "English", flag: "🇬🇧" },
-  { code: "fi", name: "Finnish", nativeName: "Suomi", flag: "🇫🇮" },
-  { code: "sv", name: "Swedish", nativeName: "Svenska", flag: "🇸🇪" },
-  { code: "fr", name: "French", nativeName: "Français", flag: "🇫🇷" },
-  { code: "es", name: "Spanish", nativeName: "Español", flag: "🇪🇸" },
-  { code: "de", name: "German", nativeName: "Deutsch", flag: "🇩🇪" },
-  { code: "ru", name: "Russian", nativeName: "Русский", flag: "🇷🇺" },
-  { code: "et", name: "Estonian", nativeName: "Eesti", flag: "🇪🇪" },
-  { code: "uk", name: "Ukrainian", nativeName: "Українська", flag: "🇺🇦" },
-  { code: "ar", name: "Arabic", nativeName: "العربية", flag: "🇦🇪" },
+  { code: "en", name: "Englanti", nativeName: "Englanti", flag: "🇬🇧" },
+  { code: "fi", name: "Suomi", nativeName: "Suomi", flag: "🇫🇮" },
+  { code: "sv", name: "Ruotsi", nativeName: "Ruotsi", flag: "🇸🇪" },
+  { code: "fr", name: "Ranska", nativeName: "Ranska", flag: "🇫🇷" },
+  { code: "es", name: "Espanja", nativeName: "Espanja", flag: "🇪🇸" },
+  { code: "de", name: "Saksa", nativeName: "Saksa", flag: "🇩🇪" },
+  { code: "ru", name: "Venäjä", nativeName: "Venäjä", flag: "🇷🇺" },
+  { code: "et", name: "Viro", nativeName: "Viro", flag: "🇪🇪" },
+  { code: "uk", name: "Ukraina", nativeName: "Ukraina", flag: "🇺🇦" },
+  { code: "ar", name: "Arabia", nativeName: "Arabia", flag: "🇦🇪" },
 ];
 
 function applyLanguageCookie(langCode: string) {
   if (typeof document === "undefined") return;
-  if (langCode === "en") {
-    // Clear cookie to return to native English
+  if (langCode === "fi") {
     document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
     document.cookie = `googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; domain=.${window.location.hostname}; path=/;`;
     window.location.reload();
   } else {
-    // Translate from English to target language
-    const cookieValue = `/en/${langCode}`;
+    const cookieValue = `/fi/${langCode}`;
     document.cookie = `googtrans=${cookieValue}; path=/`;
     document.cookie = `googtrans=${cookieValue}; domain=.${window.location.hostname}; path=/`;
 
@@ -62,9 +60,9 @@ function applyLanguageCookie(langCode: string) {
 
 export default function LanguageTranslator() {
   const [currentLang, setCurrentLang] = useState<string>(() => {
-    if (typeof document === "undefined") return "en";
+    if (typeof document === "undefined") return "fi";
     const match = document.cookie.match(/googtrans=\/([^/]+)\/([^;]+)/);
-    return match && match[2] ? match[2] : "en";
+    return match && match[2] ? match[2] : "fi";
   });
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -75,7 +73,7 @@ export default function LanguageTranslator() {
         if (window.google?.translate?.TranslateElement) {
           new window.google.translate.TranslateElement(
             {
-              pageLanguage: "en",
+              pageLanguage: "fi",
               autoDisplay: false,
               includedLanguages: "en,fi,sv,fr,es,de,ru,et,uk,ar",
             },
@@ -106,7 +104,10 @@ export default function LanguageTranslator() {
     applyLanguageCookie(langCode);
   };
 
-  const selectedLanguage = LANGUAGES.find((l) => l.code === currentLang) || LANGUAGES[0];
+  const selectedLanguage =
+    LANGUAGES.find((l) => l.code === currentLang) ||
+    LANGUAGES.find((l) => l.code === "fi") ||
+    LANGUAGES[0];
 
   return (
     <div className="relative inline-block text-left" ref={dropdownRef}>
@@ -120,7 +121,7 @@ export default function LanguageTranslator() {
         className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-slate-800/90 hover:bg-slate-700 text-slate-200 hover:text-white border border-slate-700/80 text-xs font-medium transition-all shadow-xs"
         aria-expanded={isOpen}
         aria-haspopup="true"
-        title="Select language / Valitse kieli"
+        title="Valitse kieli"
       >
         <span className="text-sm leading-none">{selectedLanguage.flag}</span>
         <span className="font-semibold">{selectedLanguage.nativeName}</span>
@@ -133,7 +134,7 @@ export default function LanguageTranslator() {
           <div className="px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider text-slate-400 border-b border-slate-100 flex items-center justify-between">
             <span className="flex items-center gap-1">
               <Globe className="w-3 h-3 text-cyan-600" />
-              Language / Translate
+              Valitse kieli
             </span>
             <span className="text-[9px] text-cyan-700 font-normal">Sam&apos;s Care</span>
           </div>
@@ -166,7 +167,7 @@ export default function LanguageTranslator() {
           </div>
 
           <div className="px-3 pt-2 pb-1 border-t border-slate-100 text-[10px] text-slate-500 text-center">
-            Languages: EN • FI • SV • FR • ES
+            Kielet: FI • EN • SV • FR • ES
           </div>
         </div>
       )}

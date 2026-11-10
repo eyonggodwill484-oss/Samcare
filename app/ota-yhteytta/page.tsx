@@ -5,41 +5,39 @@ import {
   MapPin
 } from "lucide-react";
 import QuickConsultationForm from "@/components/QuickConsultationForm";
+import { otaYhteyttaSEO } from "@/seo";
 
-export const metadata = {
-  title: "Contact Us & On-Call Numbers | Sam's Care Oy - Espoo, Lohja, Helsinki",
-  description: "Contact Sam's Care Oy: Lohja 050 555 1187, Helsinki/Vantaa/Espoo 044 793 7886, Raasepori 044 763 1820. Email: info@samscare.fi.",
-};
+export const metadata = otaYhteyttaSEO;
 
 export default function OtaYhteyttaPage() {
   const branches = [
     {
-      city: "Lohja Main Office",
+      city: "Lohjan päätoimisto",
       address: "Laurinkatu 51, 08100 Lohja",
       tel: "050 555 1187",
       email: "info@samscare.fi",
-      role: "Lohja, Vihti, Karkkila & Clinical Nurses",
+      role: "Lohja, Vihti, Karkkila ja sairaanhoitajat",
     },
     {
-      city: "Espoo Regional Office",
+      city: "Espoon toimisto",
       address: "Ansatie 18, 02940 Espoo",
       tel: "044 793 7886",
       email: "info@samscare.fi",
-      role: "Espoo, Kauniainen, Kirkkonummi",
+      role: "Espoo, Kauniainen ja Kirkkonummi",
     },
     {
-      city: "Helsinki & Vantaa Team",
-      address: "In-home mobile nursing teams",
+      city: "Helsingin ja Vantaan tiimi",
+      address: "Liikkuvat kotisairaanhoidon tiimit",
       tel: "044 793 7886",
       email: "info@samscare.fi",
-      role: "Helsinki, Vantaa, and Central Uusimaa",
+      role: "Helsinki, Vantaa ja Keski-Uusimaa",
     },
     {
-      city: "Raasepori Regional Team",
-      address: "Swedish-language care & regional service",
+      city: "Raaseporin alueen tiimi",
+      address: "Ruotsinkielinen hoiva ja alueellinen palvelu",
       tel: "044 763 1820",
       email: "info@samscare.fi",
-      role: "Raasepori (Tammisaari, Karjaa), Hanko, Inkoo",
+      role: "Raasepori (Tammisaari, Karjaa), Hanko ja Inkoo",
     },
   ];
 
@@ -50,7 +48,7 @@ export default function OtaYhteyttaPage() {
         <div className="absolute inset-0">
           <Image
             src="/Images/Services%20image1.png"
-            alt="Contact Sam's Care"
+            alt="Ota yhteyttä Sam's Careen"
             fill
             className="page-header-image h-full w-full object-cover"
           />
@@ -61,13 +59,13 @@ export default function OtaYhteyttaPage() {
           <div className="max-w-3xl space-y-5">
             <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-white/10 text-slate-100 text-xs font-semibold uppercase tracking-wider border border-white/20 backdrop-blur-sm">
               <Phone className="w-3.5 h-3.5 text-cyan-300" />
-              We Are Here For You
+              Olemme täällä sinua varten
             </span>
             <h1 className="text-3xl sm:text-5xl font-black tracking-tight text-[#62ddc9] leading-tight">
-              Contact Us – Care is Always Nearby
+              Ota yhteyttä – hoitaja on lähelläsi
             </h1>
             <p className="mx-auto max-w-2xl text-base text-slate-100 sm:text-lg">
-              Have questions about our services, want to book a complimentary care evaluation, or wish to speak directly with a nurse? We are here to help.
+              Onko sinulla kysyttävää palveluistamme, haluatko varata maksuttoman kartoituskäynnin tai keskustella suoraan hoitajan kanssa? Autamme mielellämme.
             </p>
           </div>
         </div>
@@ -79,10 +77,10 @@ export default function OtaYhteyttaPage() {
           
           <div className="text-center max-w-2xl mx-auto mb-12 space-y-2">
             <span className="text-xs font-bold uppercase tracking-wider text-amber-600 bg-amber-50 px-3 py-1 rounded-full">
-              Regional On-Call Lines
+              Alueelliset päivystysnumerot
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
-              Direct Phone Lines by Area
+              Alueelliset puhelinnumerot
             </h2>
           </div>
 
@@ -129,8 +127,8 @@ export default function OtaYhteyttaPage() {
       <section className="py-20 bg-slate-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <QuickConsultationForm 
-            title="Send Us a Message or Request a Consultation"
-            subtitle="Fill out your details below and our head nurse will call you back promptly."
+            title="Lähetä viesti tai pyydä kartoituskäyntiä"
+            subtitle="Täytä yhteystietosi, niin johtava hoitajamme ottaa sinuun pian yhteyttä."
           />
         </div>
       </section>
