@@ -6,6 +6,7 @@ import Footer from '@/components/Footer';
 import SitePageTransition from '@/components/SitePageTransition';
 import ScrollProgressIndicator from '@/components/ScrollProgressIndicator';
 import SiteScrollProgress from '@/components/SiteScrollProgress';
+import ServiceDocuments from '@/components/ServiceDocuments';
 import { cn } from "@/lib/utils";
 
 const inter = Inter({subsets:['latin'],variable:'--font-sans'});
@@ -33,10 +34,6 @@ export const metadata: Metadata = {
     "Sam's Care",
   ],
   authors: [{ name: "Sam's Care Oy" }],
-  icons: {
-    icon: '/Images/Logo.png',
-    apple: '/Images/Logo.png',
-  },
   openGraph: {
     title: "Sam's Care Oy | Luotettava kotihoito Suomessa",
     description:
@@ -55,11 +52,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fi" className={cn("scroll-smooth", poppins.variable, "font-sans", inter.variable)}>
+    <html
+      lang="fi"
+      suppressHydrationWarning
+      className={cn("scroll-smooth", poppins.variable, "font-sans", inter.variable)}
+    >
       <body className="min-h-screen flex flex-col bg-white text-brand-black antialiased selection:bg-brand-turquoise selection:text-brand-black">
         <Navbar />
         <main className="flex-1">
           <SitePageTransition>{children}</SitePageTransition>
+          <ServiceDocuments />
         </main>
         <Footer />
         <ScrollProgressIndicator />

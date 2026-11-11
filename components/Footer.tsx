@@ -166,12 +166,15 @@ export default function Footer() {
                 <MapPin className="w-4 h-4 text-[#3dc9b2] mt-1 shrink-0" />
                 <div>
                   <strong className="text-white block">Espoon toimisto:</strong>
-                  Ansatie 18, 02940 Espoo
+                  Sinikalliontie 10, 02630 Espoo
                 </div>
               </div>
               <div className="pt-2 text-xs text-blue-100">
                 <strong className="text-white block mb-1">Palvelualue Suomessa:</strong>
                 Lohja, Espoo, Helsinki, Vantaa, Raasepori, Hanko, Inkoo ja Siuntio.
+                <span className="mt-1 block">
+                  Raaseporin päivystysnumero: 044 763 1820
+                </span>
               </div>
             </div>
           </div>

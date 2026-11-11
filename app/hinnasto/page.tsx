@@ -52,6 +52,9 @@ export default function HinnastoPage() {
             >
               Palveluiden hinnasto
             </h2>
+            <p className="mt-3 text-sm text-slate-600">
+              Kaikki hinnaston hinnat ovat alv 0 %.
+            </p>
 
             <ul className="mt-6 divide-y divide-slate-200 border-y border-slate-200">
               <li className="flex items-baseline justify-between gap-4 py-4">
@@ -71,9 +74,9 @@ export default function HinnastoPage() {
                 </span>
               </li>
               <li className="flex items-baseline justify-between gap-4 py-4">
-                <span className="font-medium text-slate-700">Lastenhoito</span>
+                <span className="font-medium text-slate-700">Kotisiivous</span>
                 <span className="shrink-0 text-lg font-bold text-[#045184]">
-                  51,55 € <span className="text-sm font-medium">/ tunti</span>
+                  35 € <span className="text-sm font-medium">/ tunti</span>
                 </span>
               </li>
               <li className="flex items-baseline justify-between gap-4 py-4">
@@ -126,17 +129,12 @@ export default function HinnastoPage() {
                 </li>
                 <li className="flex items-center justify-between gap-4 py-3">
                   <span className="text-slate-700">
-                    Sunnuntait ja pyhät{" "}
-                    <span className="text-slate-500">
-                      lauantai klo 20 – sunnuntai klo 12
-                    </span>
+                    Lauantait <span className="text-slate-500">klo 20–24</span>
                   </span>
                   <span className="shrink-0 font-bold text-[#045184]">+100%</span>
                 </li>
                 <li className="flex items-center justify-between gap-4 py-3">
-                  <span className="text-slate-700">
-                    Aatto <span className="text-slate-500">klo 12–20</span>
-                  </span>
+                  <span className="text-slate-700">Sunnuntait ja arkipyhät</span>
                   <span className="shrink-0 font-bold text-[#045184]">+100%</span>
                 </li>
               </ul>

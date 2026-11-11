@@ -342,7 +342,7 @@ export default function Home() {
               Palvelualueet Suomessa
             </span>
             <h2 className="text-3xl sm:text-4xl font-black text-white">
-              Palvelemme koko Uudenmaan aluetta
+              PALVELEMME KOKO UUDENMAAN ALUEELLA
             </h2>
             <p className="text-slate-300 text-base">
               Alueelliset toimipisteemme ja mobiilit hoitotiimimme tarjoavat
@@ -353,8 +353,8 @@ export default function Home() {
           <div className="mx-auto grid max-w-4xl grid-cols-1 gap-4 text-center sm:grid-cols-3">
             {[
               { city: 'Lohja', tel: '050 555 1187' },
-              { city: 'Helsinki', tel: '044 793 7886' },
-              { city: 'Hanko & Inkoo', tel: '044 763 1820' },
+              { city: 'Espoo', tel: '044 793 7886' },
+              { city: 'Raasepori', tel: '044 763 1820' },
             ].map((loc, i) => (
               <ScrollReveal key={loc.city} delay={i * 100}>
                 <div className="bg-slate-800/80 backdrop-blur-xs p-5 rounded-2xl border border-slate-700/80 hover:border-cyan-500/50 transition-all">

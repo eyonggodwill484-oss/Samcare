@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { 
+  FileText,
   Phone, 
   MapPin
 } from "lucide-react";
@@ -20,7 +21,7 @@ export default function OtaYhteyttaPage() {
     },
     {
       city: "Espoon toimisto",
-      address: "Ansatie 18, 02940 Espoo",
+      address: "Sinikalliontie 10, 02630 Espoo",
       tel: "044 793 7886",
       email: "info@samscare.fi",
       role: "Espoo, Kauniainen ja Kirkkonummi",
@@ -130,6 +131,31 @@ export default function OtaYhteyttaPage() {
             title="Lähetä viesti tai pyydä kartoituskäyntiä"
             subtitle="Täytä yhteystietosi, niin johtava hoitajamme ottaa sinuun pian yhteyttä."
           />
+          <div className="mt-8">
+            <h2 className="mb-4 text-center text-lg font-bold text-slate-900">
+              Ladattavat materiaalit
+            </h2>
+            <div className="grid gap-3 sm:grid-cols-2">
+              <a
+                href="/documents/document-1.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-2xl border border-slate-200 bg-white px-5 py-4 text-sm font-semibold text-slate-800 shadow-sm transition hover:border-cyan-500 hover:text-cyan-800 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-cyan-100"
+              >
+                <FileText className="h-5 w-5 text-cyan-700" aria-hidden="true" />
+                Avaa PDF 1
+              </a>
+              <a
+                href="/documents/document-2.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-2xl border border-slate-200 bg-white px-5 py-4 text-sm font-semibold text-slate-800 shadow-sm transition hover:border-cyan-500 hover:text-cyan-800 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-cyan-100"
+              >
+                <FileText className="h-5 w-5 text-cyan-700" aria-hidden="true" />
+                Avaa PDF 2
+              </a>
+            </div>
+          </div>
         </div>
       </section>
     </div>

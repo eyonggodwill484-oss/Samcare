@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import type { ComponentProps, ButtonHTMLAttributes, ReactNode } from 'react';
 import LensEffect from '@/components/LensEffect';
-import { ShimmerButton } from '@/components/ui/shimmer-button';
+import { SiteButton } from '@/components/ui/site-button';
 
 type ButtonVariant = 'primary' | 'outline';
 type ButtonSize = 'sm' | 'md' | 'lg';
@@ -67,7 +67,7 @@ export default function Button(props: ButtonProps) {
     } = props;
 
     return (
-      <ShimmerButton
+      <SiteButton
         href={href}
         background={variant === 'outline' ? '#ffffff' : '#3dc9b2'}
         className={getButtonClasses(variant, size, className)}
@@ -86,7 +86,7 @@ export default function Button(props: ButtonProps) {
         ) : (
           children
         )}
-      </ShimmerButton>
+      </SiteButton>
     );
   }
 
@@ -100,7 +100,7 @@ export default function Button(props: ButtonProps) {
   } = props;
 
   return (
-    <ShimmerButton
+    <SiteButton
       background={variant === 'outline' ? '#ffffff' : '#3dc9b2'}
       className={getButtonClasses(variant, size, className)}
       data-site-button
@@ -118,6 +118,6 @@ export default function Button(props: ButtonProps) {
       ) : (
         children
       )}
-    </ShimmerButton>
+    </SiteButton>
   );
 }

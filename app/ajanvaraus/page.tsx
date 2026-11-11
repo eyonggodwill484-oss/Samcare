@@ -272,7 +272,7 @@ export default function AjanvarausPage() {
                   </label>
                   <input
                     type="text"
-                    placeholder="Esim. Ansatie 18 B 4, 02940 Espoo"
+                    placeholder="Esim. Sinikalliontie 10, 02630 Espoo"
                     value={formData.address}
                     onChange={(e) => setFormData({ ...formData, address: e.target.value })}
                     className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white text-sm outline-hidden"

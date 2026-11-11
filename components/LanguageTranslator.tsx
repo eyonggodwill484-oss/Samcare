@@ -30,7 +30,6 @@ const LANGUAGES: Language[] = [
   { code: "sv", name: "Ruotsi", nativeName: "Ruotsi", flag: "🇸🇪" },
   { code: "fr", name: "Ranska", nativeName: "Ranska", flag: "🇫🇷" },
   { code: "es", name: "Espanja", nativeName: "Espanja", flag: "🇪🇸" },
-  { code: "de", name: "Saksa", nativeName: "Saksa", flag: "🇩🇪" },
   { code: "ru", name: "Venäjä", nativeName: "Venäjä", flag: "🇷🇺" },
   { code: "et", name: "Viro", nativeName: "Viro", flag: "🇪🇪" },
   { code: "uk", name: "Ukraina", nativeName: "Ukraina", flag: "🇺🇦" },
@@ -68,6 +67,15 @@ export default function LanguageTranslator() {
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    const savedLanguage = document.cookie.match(/googtrans=\/([^/]+)\/([^;]+)/)?.[2];
+    if (
+      savedLanguage &&
+      !LANGUAGES.some((language) => language.code === savedLanguage)
+    ) {
+      applyLanguageCookie("fi");
+      return;
+    }
+
     if (!document.getElementById("google-translate-script")) {
       window.googleTranslateElementInit = () => {
         if (window.google?.translate?.TranslateElement) {
@@ -75,7 +83,7 @@ export default function LanguageTranslator() {
             {
               pageLanguage: "fi",
               autoDisplay: false,
-              includedLanguages: "en,fi,sv,fr,es,de,ru,et,uk,ar",
+              includedLanguages: "en,fi,sv,fr,es,ru,et,uk,ar",
             },
             "google_translate_element"
           );

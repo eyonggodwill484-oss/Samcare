@@ -143,7 +143,7 @@ export default function KotihoitoPage() {
               </p>
               <div className="mt-7 flex flex-wrap items-center justify-between gap-4 border-t border-white/25 pt-5">
                 <span className="text-sm font-semibold text-white/80">
-                  Sam&apos;s Care Ltd
+                  Sam&apos;s Care Oy
                 </span>
                 <Link
                   href="/ota-yhteytta"
