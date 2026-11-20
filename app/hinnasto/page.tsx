@@ -155,7 +155,7 @@ export default function HinnastoPage() {
 
       <section
         aria-labelledby="additional-information-title"
-        className="bg-[#f3faf9] px-4 py-14 sm:px-6 sm:py-20 lg:px-8"
+        className="bg-[#f3faf9] px-4 py-14 sm:px-6 sm:py-20 lg:px-8 dark:bg-[#0d1d27]"
       >
         <div className="mx-auto grid max-w-7xl items-center gap-8 lg:grid-cols-2 lg:gap-16">
           <div className="relative aspect-[1.5] overflow-hidden rounded-3xl bg-slate-100 shadow-lg shadow-[#045184]/10">
@@ -169,16 +169,16 @@ export default function HinnastoPage() {
           </div>
 
           <div>
-            <p className="text-sm font-bold uppercase tracking-[0.14em] text-[#045184]">
+            <p className="text-sm font-bold uppercase tracking-[0.14em] text-[#045184] dark:text-[#62ddc9]">
               Hyvä tietää
             </p>
             <h2
               id="additional-information-title"
-              className="mt-2 text-3xl font-bold tracking-tight text-[#14384b] sm:text-4xl"
+              className="mt-2 text-3xl font-bold tracking-tight text-[#14384b] sm:text-4xl dark:text-[#edf5f5]"
             >
               Lisätietoja
             </h2>
-            <p className="mt-3 text-base leading-7 text-slate-600">
+            <p className="mt-3 text-base leading-7 text-slate-600 dark:text-[#a9bcc3]">
               Tässä muutamia käytännön tietoja kotihoito- ja
               kotisairaanhoitopalveluistamme.
             </p>
@@ -187,36 +187,36 @@ export default function HinnastoPage() {
               <li className="flex items-start gap-3">
                 <CheckCircle2
                   aria-hidden="true"
-                  className="mt-0.5 h-5 w-5 shrink-0 text-[#045184]"
+                  className="mt-0.5 h-5 w-5 shrink-0 text-[#045184] dark:text-[#62ddc9]"
                 />
-                <span className="leading-6 text-slate-700">
+                <span className="leading-6 text-slate-700 dark:text-[#d7e5e8]">
                   Kotihoito- ja sairaanhoitopalvelut ovat arvonlisäverottomia (alv 0 %).
                 </span>
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle2
                   aria-hidden="true"
-                  className="mt-0.5 h-5 w-5 shrink-0 text-[#045184]"
+                  className="mt-0.5 h-5 w-5 shrink-0 text-[#045184] dark:text-[#62ddc9]"
                 />
-                <span className="leading-6 text-slate-700">
+                <span className="leading-6 text-slate-700 dark:text-[#d7e5e8]">
                   Vähimmäislaskutus on yksi tunti.
                 </span>
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle2
                   aria-hidden="true"
-                  className="mt-0.5 h-5 w-5 shrink-0 text-[#045184]"
+                  className="mt-0.5 h-5 w-5 shrink-0 text-[#045184] dark:text-[#62ddc9]"
                 />
-                <span className="leading-6 text-slate-700">
+                <span className="leading-6 text-slate-700 dark:text-[#d7e5e8]">
                   Lasku lähetetään kerran kuukaudessa.
                 </span>
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle2
                   aria-hidden="true"
-                  className="mt-0.5 h-5 w-5 shrink-0 text-[#045184]"
+                  className="mt-0.5 h-5 w-5 shrink-0 text-[#045184] dark:text-[#62ddc9]"
                 />
-                <span className="leading-6 text-slate-700">
+                <span className="leading-6 text-slate-700 dark:text-[#d7e5e8]">
                   Maksuehto on 14 päivää netto. Viivästyskorko määräytyy lain
                   mukaisesti.
                 </span>
@@ -224,18 +224,18 @@ export default function HinnastoPage() {
               <li className="flex items-start gap-3">
                 <CheckCircle2
                   aria-hidden="true"
-                  className="mt-0.5 h-5 w-5 shrink-0 text-[#045184]"
+                  className="mt-0.5 h-5 w-5 shrink-0 text-[#045184] dark:text-[#62ddc9]"
                 />
-                <span className="leading-6 text-slate-700">
+                <span className="leading-6 text-slate-700 dark:text-[#d7e5e8]">
                   Matkakulut ja pysäköintimaksut sovitaan erikseen.
                 </span>
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle2
                   aria-hidden="true"
-                  className="mt-0.5 h-5 w-5 shrink-0 text-[#045184]"
+                  className="mt-0.5 h-5 w-5 shrink-0 text-[#045184] dark:text-[#62ddc9]"
                 />
-                <span className="leading-6 text-slate-700">
+                <span className="leading-6 text-slate-700 dark:text-[#d7e5e8]">
                   Tutustumis- ja kartoituskäynti on maksuton.
                 </span>
               </li>
@@ -293,11 +293,11 @@ export default function HinnastoPage() {
               2025 alkaen näiden töiden enimmäismäärä on 1 600 €.
             </p>
 
-            <div className="mt-4 rounded-xl border border-[#c8e8e2] bg-[#eff9f7] px-4 py-4">
-              <h3 className="font-bold text-[#14384b]">
+            <div className="mt-4 rounded-xl border border-[#c8e8e2] bg-[#eff9f7] px-4 py-4 dark:border-[#29424d] dark:bg-[#14352f]">
+              <h3 className="font-bold text-[#14384b] dark:text-[#edf5f5]">
                 Erillinen tieto korotetusta vähennyksestä
               </h3>
-              <p className="mt-1 text-sm leading-6 text-slate-700">
+              <p className="mt-1 text-sm leading-6 text-slate-700 dark:text-[#d7e5e8]">
                 Saatavilla olevissa tiedoissa mainitaan myös 60 prosentin vähennys
                 työn osuudesta, enintään 3 500 € vuodessa, voimassa vuoteen 2027
                 asti. Sovellettava prosentti ja enimmäismäärä voivat riippua

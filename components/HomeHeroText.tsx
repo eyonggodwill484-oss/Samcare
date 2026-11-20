@@ -53,7 +53,7 @@ export default function HomeHeroText() {
     >
       <motion.h1
         aria-label="Tarvitsetko apua?"
-        className="font-serif text-[clamp(3rem,7vw,5.75rem)] font-bold leading-[0.98] tracking-[-0.045em] text-white"
+        className="font-serif text-[clamp(3rem,7vw,5.75rem)] font-bold leading-[0.98] tracking-[-0.045em] text-white dark:text-white"
         variants={{
           hidden: {},
           visible: {

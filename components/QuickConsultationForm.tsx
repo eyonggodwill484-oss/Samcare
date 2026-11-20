@@ -67,19 +67,19 @@ export default function QuickConsultationForm({
 
   if (submitted) {
     return (
-      <ScrollReveal className="overflow-hidden rounded-[28px] border border-emerald-100 bg-gradient-to-br from-emerald-50 via-white to-cyan-50 p-8 shadow-[0_20px_60px_rgba(15,23,42,0.08)] sm:p-10">
+      <ScrollReveal className="overflow-hidden rounded-[28px] border border-emerald-100 bg-gradient-to-br from-emerald-50 via-white to-cyan-50 p-8 shadow-[0_20px_60px_rgba(15,23,42,0.08)] sm:p-10 dark:border-[#29424d] dark:bg-[#12232d] dark:from-[#14352f] dark:via-[#12232d] dark:to-[#12232d]">
         <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-emerald-600 text-white shadow-[0_14px_30px_rgba(5,150,105,0.25)]">
           <CheckCircle2 className="h-10 w-10" />
         </div>
 
         <div className="mt-6 text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-emerald-700">
+          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-emerald-700 dark:text-[#62ddc9]">
             Sähköpostiluonnos valmis
           </p>
-          <h3 className="mt-3 text-2xl font-black tracking-tight text-slate-900 sm:text-3xl">
+          <h3 className="mt-3 text-2xl font-black tracking-tight text-slate-900 sm:text-3xl dark:text-[#edf5f5]">
             Kiitos, {formData.name}.
           </h3>
-          <p className="mx-auto mt-3 max-w-lg text-sm leading-6 text-slate-600">
+          <p className="mx-auto mt-3 max-w-lg text-sm leading-6 text-slate-600 dark:text-[#a9bcc3]">
             Verkkosivusto ei lähetä pyyntöä automaattisesti. Lähetä tiedot
             sähköpostitse alla olevasta painikkeesta; hoitotiimimme voi vastata
             vasta viestin saavuttua.
@@ -96,7 +96,7 @@ export default function QuickConsultationForm({
           </a>
           <a
             href="tel:0505551187"
-            className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-slate-700 transition-colors hover:border-slate-300 hover:bg-slate-50"
+            className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-slate-700 transition-colors hover:border-slate-300 hover:bg-slate-50 dark:border-[#29424d] dark:bg-[#172e39] dark:text-[#d7e5e8] dark:hover:bg-[#23434a]"
           >
             <Phone className="h-4 w-4" />
             Soita 050 555 1187
@@ -107,20 +107,20 @@ export default function QuickConsultationForm({
   }
 
   return (
-    <ScrollReveal className="relative overflow-hidden rounded-[30px] border border-slate-200 bg-[radial-gradient(circle_at_top_left,_rgba(34,211,238,0.12),_transparent_28%),linear-gradient(180deg,_#ffffff_0%,_#f8fbff_100%)] p-5 shadow-[0_24px_80px_rgba(15,23,42,0.08)] sm:p-8">
+    <ScrollReveal className="relative overflow-hidden rounded-[30px] border border-slate-200 bg-[radial-gradient(circle_at_top_left,_rgba(34,211,238,0.12),_transparent_28%),linear-gradient(180deg,_#ffffff_0%,_#f8fbff_100%)] p-5 shadow-[0_24px_80px_rgba(15,23,42,0.08)] sm:p-8 dark:border-[#29424d] dark:bg-[radial-gradient(circle_at_top_left,_rgba(98,221,201,0.08),_transparent_28%),linear-gradient(180deg,_#12232d_0%,_#0d1d27_100%)]">
       <div className="absolute -right-14 -top-14 h-32 w-32 rounded-full bg-cyan-100/70 blur-3xl" />
       <div className="absolute -left-8 bottom-0 h-24 w-24 rounded-full bg-emerald-100/70 blur-2xl" />
 
       <div className="relative">
-        <div className="mb-6 flex flex-col gap-4 border-b border-slate-200 pb-5 sm:flex-row sm:items-start sm:justify-between">
+        <div className="mb-6 flex flex-col gap-4 border-b border-slate-200 pb-5 sm:flex-row sm:items-start sm:justify-between dark:border-[#29424d]">
           <div>
-            <h3 className="text-2xl font-black tracking-tight text-slate-900">
+            <h3 className="text-2xl font-black tracking-tight text-slate-900 dark:text-[#edf5f5]">
               {title || 'Varaa maksuton kartoituskäynti'}
             </h3>
           </div>
         </div>
 
-        <p className="mb-6 text-sm leading-6 text-slate-600">
+        <p className="mb-6 text-sm leading-6 text-slate-600 dark:text-[#a9bcc3]">
           {subtitle ||
             'Kerro, millaista tukea tarvitset, niin otamme sinuun yhteyttä sopivan kotikäynnin järjestämiseksi.'}
         </p>
@@ -128,7 +128,7 @@ export default function QuickConsultationForm({
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="grid gap-4 sm:grid-cols-2">
             <div>
-              <label className="mb-2 block text-[11px] font-bold uppercase tracking-[0.16em] text-slate-600">
+              <label className="mb-2 block text-[11px] font-bold uppercase tracking-[0.16em] text-slate-600 dark:text-[#d7e5e8]">
                 Nimi <span className="text-cyan-700">*</span>
               </label>
               <input
@@ -137,12 +137,12 @@ export default function QuickConsultationForm({
                 placeholder="Etu- ja sukunimi"
                 value={formData.name}
                 onChange={(e) => updateField('name', e.target.value)}
-                className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm outline-none transition focus:border-cyan-500 focus:ring-4 focus:ring-cyan-100"
+                className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm outline-none transition focus:border-cyan-500 focus:ring-4 focus:ring-cyan-100 dark:border-[#29424d] dark:bg-[#10232d] dark:text-[#edf5f5] dark:placeholder:text-[#94a3b8]"
               />
             </div>
 
             <div>
-              <label className="mb-2 block text-[11px] font-bold uppercase tracking-[0.16em] text-slate-600">
+              <label className="mb-2 block text-[11px] font-bold uppercase tracking-[0.16em] text-slate-600 dark:text-[#d7e5e8]">
                 Puhelinnumero <span className="text-cyan-700">*</span>
               </label>
               <input
@@ -151,14 +151,14 @@ export default function QuickConsultationForm({
                 placeholder="040 123 4567"
                 value={formData.phone}
                 onChange={(e) => updateField('phone', e.target.value)}
-                className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm outline-none transition focus:border-cyan-500 focus:ring-4 focus:ring-cyan-100"
+                className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm outline-none transition focus:border-cyan-500 focus:ring-4 focus:ring-cyan-100 dark:border-[#29424d] dark:bg-[#10232d] dark:text-[#edf5f5] dark:placeholder:text-[#94a3b8]"
               />
             </div>
           </div>
 
           <div className="grid gap-4 sm:grid-cols-2">
             <div>
-              <label className="mb-2 block text-[11px] font-bold uppercase tracking-[0.16em] text-slate-600">
+              <label className="mb-2 block text-[11px] font-bold uppercase tracking-[0.16em] text-slate-600 dark:text-[#d7e5e8]">
                 Sähköposti
               </label>
               <input
@@ -166,18 +166,18 @@ export default function QuickConsultationForm({
                 placeholder="info@samscare.fi"
                 value={formData.email}
                 onChange={(e) => updateField('email', e.target.value)}
-                className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm outline-none transition focus:border-cyan-500 focus:ring-4 focus:ring-cyan-100"
+                className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm outline-none transition focus:border-cyan-500 focus:ring-4 focus:ring-cyan-100 dark:border-[#29424d] dark:bg-[#10232d] dark:text-[#edf5f5] dark:placeholder:text-[#94a3b8]"
               />
             </div>
 
             <div>
-              <label className="mb-2 block text-[11px] font-bold uppercase tracking-[0.16em] text-slate-600">
+              <label className="mb-2 block text-[11px] font-bold uppercase tracking-[0.16em] text-slate-600 dark:text-[#d7e5e8]">
                 Kaupunki / alue
               </label>
               <select
                 value={formData.city}
                 onChange={(e) => updateField('city', e.target.value)}
-                className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm outline-none transition focus:border-cyan-500 focus:ring-4 focus:ring-cyan-100"
+                className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm outline-none transition focus:border-cyan-500 focus:ring-4 focus:ring-cyan-100 dark:border-[#29424d] dark:bg-[#10232d] dark:text-[#edf5f5]"
               >
                 <option value="Espoo">Espoo</option>
                 <option value="Helsinki">Helsinki</option>
@@ -193,13 +193,13 @@ export default function QuickConsultationForm({
           </div>
 
           <div>
-            <label className="mb-2 block text-[11px] font-bold uppercase tracking-[0.16em] text-slate-600">
+            <label className="mb-2 block text-[11px] font-bold uppercase tracking-[0.16em] text-slate-600 dark:text-[#d7e5e8]">
               Tarvittava palvelu
             </label>
             <select
               value={formData.service}
               onChange={(e) => updateField('service', e.target.value)}
-              className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm outline-none transition focus:border-cyan-500 focus:ring-4 focus:ring-cyan-100"
+              className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm outline-none transition focus:border-cyan-500 focus:ring-4 focus:ring-cyan-100 dark:border-[#29424d] dark:bg-[#10232d] dark:text-[#edf5f5]"
             >
               <option value="home-care">Kotihoito</option>
               <option value="home-nursing">Kotisairaanhoito</option>
@@ -211,7 +211,7 @@ export default function QuickConsultationForm({
           </div>
 
           <div>
-            <label className="mb-2 block text-[11px] font-bold uppercase tracking-[0.16em] text-slate-600">
+            <label className="mb-2 block text-[11px] font-bold uppercase tracking-[0.16em] text-slate-600 dark:text-[#d7e5e8]">
               Lisätiedot
             </label>
             <textarea
@@ -219,11 +219,11 @@ export default function QuickConsultationForm({
               placeholder="Kerro tarpeistasi, mieltymyksistäsi tai sopivista ajoista..."
               value={formData.message}
               onChange={(e) => updateField('message', e.target.value)}
-              className="w-full resize-none rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm outline-none transition focus:border-cyan-500 focus:ring-4 focus:ring-cyan-100"
+              className="w-full resize-none rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm outline-none transition focus:border-cyan-500 focus:ring-4 focus:ring-cyan-100 dark:border-[#29424d] dark:bg-[#10232d] dark:text-[#edf5f5] dark:placeholder:text-[#94a3b8]"
             />
           </div>
 
-          <div className="flex items-start gap-3 rounded-2xl border border-slate-200 bg-slate-50 px-3 py-3">
+          <div className="flex items-start gap-3 rounded-2xl border border-slate-200 bg-slate-50 px-3 py-3 dark:border-[#29424d] dark:bg-[#0d1d27]">
             <input
               type="checkbox"
               id="form-consent"
@@ -234,7 +234,7 @@ export default function QuickConsultationForm({
             />
             <label
               htmlFor="form-consent"
-              className="text-xs leading-5 text-slate-600"
+              className="text-xs leading-5 text-slate-600 dark:text-[#a9bcc3]"
             >
               Hyväksyn, että yhteystietojani voidaan käsitellä tätä hoitopyyntöä
               varten. Emme jaa tietojasi kolmansille osapuolille.
@@ -250,7 +250,7 @@ export default function QuickConsultationForm({
           <div className="flex flex-col gap-4 pt-2 sm:flex-row sm:items-center sm:justify-end">
             <Button
               type="submit"
-              className="rounded-full"
+              className="consultation-submit rounded-full"
             >
               Valmistele sähköpostipyyntö
               <ArrowRight className="h-4 w-4" />

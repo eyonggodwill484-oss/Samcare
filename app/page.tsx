@@ -32,7 +32,10 @@ export default function Home() {
       >
         <div className="mx-auto flex max-w-7xl flex-col gap-4 px-5 py-7 sm:px-8 sm:py-8 md:flex-row md:items-center lg:px-12">
           <div className="flex shrink-0 items-center gap-3 md:w-[250px]">
-            <Globe aria-hidden="true" className="size-7 shrink-0 text-[#62ddc9]" />
+            <Globe
+              aria-hidden="true"
+              className="size-7 shrink-0 text-[#62ddc9]"
+            />
             <p className="text-base font-semibold sm:text-lg md:max-w-[185px]">
               Tarjoamme palveluitamme
             </p>
@@ -52,15 +55,18 @@ export default function Home() {
                     { name: 'ranskaksi', flag: '🇫🇷' },
                     { name: 'espanjaksi', flag: '🇪🇸' },
                   ].map(({ name, flag }) => (
-                      <li
-                        key={name}
-                        className="inline-flex shrink-0 items-center gap-4 whitespace-nowrap px-6 text-lg font-semibold text-white/95 sm:text-xl"
+                    <li
+                      key={name}
+                      className="inline-flex shrink-0 items-center gap-4 whitespace-nowrap px-6 text-lg font-semibold text-white/95 sm:text-xl"
+                    >
+                      <span
+                        aria-hidden="true"
+                        className="text-3xl leading-none sm:text-4xl"
                       >
-                        <span aria-hidden="true" className="text-3xl leading-none sm:text-4xl">
-                          {flag}
-                        </span>
-                        {name}
-                      </li>
+                        {flag}
+                      </span>
+                      {name}
+                    </li>
                   ))}
                 </ul>
               ))}
@@ -69,7 +75,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-white py-14 sm:py-20 lg:py-24">
+      <section className="bg-white py-14 sm:py-20 lg:py-24 dark:bg-[#09151d]">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
           <div className="grid grid-cols-1 items-center gap-8 md:gap-12 lg:grid-cols-2 lg:gap-16">
             <ScrollReveal
@@ -93,22 +99,20 @@ export default function Home() {
               <span className="mb-3 inline-flex items-center gap-1.5 rounded-full bg-teal-100 px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-teal-800">
                 Hoiva, joka sopii elämääsi
               </span>
-              <h2 className="text-4xl font-bold leading-[1.1] tracking-[-0.035em] text-slate-900 sm:text-5xl">
+              <h2 className="text-4xl font-bold leading-[1.1] tracking-[-0.035em] text-slate-900 sm:text-5xl dark:text-[#edf5f5]">
                 Palvelut
               </h2>
-              <p className="mt-5 text-base leading-7 text-slate-600 sm:text-lg sm:leading-8">
-                Tervetuloa Sam&apos;s Care -palveluiden monipuoliseen valikoimaan.
-                Tarjoamme laaja-alaisia sosiaali- ja terveyspalveluita asiakkaan
-                kotona. Palveluihimme kuuluvat myös vastaanottopalvelut ja
-                kuntien sekä yritysten tarpeisiin räätälöidyt ratkaisut. Voit
-                hakea palveluitamme suoraan tai oman kuntasi kautta palvelusetelillä
-                tai ostopalveluna. Ota yhteyttä, niin etsimme yhdessä sinulle
-                sopivan ja joustavan palveluratkaisun.
+              <p className="mt-5 text-base leading-7 text-slate-600 sm:text-lg sm:leading-8 dark:text-[#a9bcc3]">
+                Tervetuloa Sam&apos;s Care -palveluiden monipuoliseen
+                valikoimaan. Tarjoamme laaja-alaisia sosiaali- ja
+                terveyspalveluita asiakkaan kotona. Palveluihimme kuuluvat myös
+                vastaanottopalvelut ja kuntien sekä yritysten tarpeisiin
+                räätälöidyt ratkaisut. Voit hakea palveluitamme suoraan tai oman
+                kuntasi kautta palvelusetelillä tai ostopalveluna. Ota yhteyttä,
+                niin etsimme yhdessä sinulle sopivan ja joustavan
+                palveluratkaisun.
               </p>
-              <Button
-                href="/palvelut"
-                className="mt-7 rounded-md"
-              >
+              <Button href="/palvelut" className="mt-7 rounded-md">
                 Tutustu palveluihin
                 <ArrowRight aria-hidden="true" className="size-4" />
               </Button>
@@ -118,36 +122,34 @@ export default function Home() {
       </section>
 
       {/* FEATURE SECTION 2: DOMICILIARY CARE */}
-      <section className="py-20 bg-slate-50">
+      <section className="py-20 bg-slate-50 dark:bg-[#0d1d27]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Content text */}
-            <ScrollReveal
-              className="lg:col-span-5 space-y-6"
-              direction="left"
-            >
+            <ScrollReveal className="lg:col-span-5 space-y-6" direction="left">
               <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-teal-100 text-teal-800 text-xs font-semibold uppercase tracking-wider">
                 Kotihoito
               </span>
-              <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-slate-900 leading-tight">
+              <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-slate-900 leading-tight dark:text-[#edf5f5]">
                 Kotihoito tukee arkea
               </h2>
-              <p className="text-slate-600 text-base leading-relaxed">
+              <p className="text-slate-600 text-base leading-relaxed dark:text-[#a9bcc3]">
                 Kotihoito sopii paitsi ikäihmisille myös korvaaville omaisille,
                 mielenterveys- ja päihdehoidossa oleville, vammaisille sekä
                 sairauden tai leikkauksen jälkeen toipuville. Teemme yhteistyötä
                 kunnan kotihoidon kanssa.
               </p>
-              <p className="text-slate-600 text-base leading-relaxed">
+              <p className="text-slate-600 text-base leading-relaxed dark:text-[#a9bcc3]">
                 Koti on arvokas, joten palvelumme tavoitteena on tukea kotona
-                asuvien asiakkaiden arkea ja selviytymistä monipuolisten hoito- ja
-                kuntoutuspalveluiden avulla. Sam&apos;s Care -kotihoitopalvelut on
-                räätälöity jokaisen asiakkaan tarpeiden mukaan, ja ammattitaitoiset
-                hoitajat ovat tavoitettavissa ympäri vuorokauden sekä lyhytaikaisiin
-                että pitkäaikaisiin tarpeisiin. Ota yhteyttä, niin löydämme juuri
-                sinun tilanteeseesi sopivan palveluratkaisun.
+                asuvien asiakkaiden arkea ja selviytymistä monipuolisten hoito-
+                ja kuntoutuspalveluiden avulla. Sam&apos;s Care
+                -kotihoitopalvelut on räätälöity jokaisen asiakkaan tarpeiden
+                mukaan, ja ammattitaitoiset hoitajat ovat tavoitettavissa ympäri
+                vuorokauden sekä lyhytaikaisiin että pitkäaikaisiin tarpeisiin.
+                Ota yhteyttä, niin löydämme juuri sinun tilanteeseesi sopivan
+                palveluratkaisun.
               </p>
-              <p className="text-sm font-semibold text-slate-500">
+              <p className="text-sm font-semibold text-slate-500 dark:text-[#a9bcc3]">
                 Sam&apos;s Care Oy
               </p>
               <Button href="/ota-yhteytta" className="rounded-md">
@@ -188,7 +190,10 @@ export default function Home() {
           aria-hidden="true"
           className="absolute inset-0 bg-gradient-to-r from-[#062235]/80 via-[#062235]/45 to-[#062235]/20"
         />
-        <ScrollReveal className="relative mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-12 lg:py-24" direction="left">
+        <ScrollReveal
+          className="relative mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-12 lg:py-24"
+          direction="left"
+        >
           <div className="max-w-3xl space-y-5">
             <span className="inline-flex items-center gap-1.5 rounded-full bg-teal-100 px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-teal-800">
               Hoitoa, jossa sinulle on aikaa
@@ -204,9 +209,10 @@ export default function Home() {
             </p>
             <p className="text-base leading-relaxed text-white/90 sm:text-lg">
               Hoitajamme eivät kiirehdi seuraavaan tapaamiseen. Sinun kanssasi
-              vietetty aika ja keskustelu niin pienistä kuin tärkeistäkin asioista
-              ovat olennainen osa tarjoamaamme hoitoa. Monet asiakkaamme kertovat
-              arvostavansa erityisesti pidempiä ja rauhallisempia hoitokäyntejä.
+              vietetty aika ja keskustelu niin pienistä kuin tärkeistäkin
+              asioista ovat olennainen osa tarjoamaamme hoitoa. Monet
+              asiakkaamme kertovat arvostavansa erityisesti pidempiä ja
+              rauhallisempia hoitokäyntejä.
             </p>
             <p className="text-base leading-relaxed text-white/90 sm:text-lg">
               Haluamme, että tunnet olosi huolehdituksi ja että perheesi voi
@@ -238,12 +244,6 @@ export default function Home() {
               <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-slate-900 leading-tight">
                 Maksuton kartoituskäynti kotona
               </h2>
-              <p className="text-slate-600 text-base leading-relaxed">
-                Hoitotarpeet voivat syntyä yllättäen leikkauksen jälkeen tai
-                kehittyä vähitellen iän myötä. Maksuton kartoituskäyntimme on
-                täysin sitoutumaton:
-              </p>
-
               <div className="space-y-4">
                 <div className="flex items-start gap-3.5">
                   <div className="w-8 h-8 rounded-xl bg-cyan-600 text-white font-bold flex items-center justify-center shrink-0 text-sm">
@@ -254,8 +254,8 @@ export default function Home() {
                       Tutustuminen ja tarpeen arviointi:
                     </strong>
                     <span className="text-slate-600 text-xs sm:text-sm">
-                      Hoitaja käy kotonasi kuuntelemassa toiveitasi, päivittäisiä
-                      rutiinejasi ja terveydentilaasi.
+                      Hoitaja käy kotonasi kuuntelemassa toiveitasi,
+                      päivittäisiä rutiinejasi ja terveydentilaasi.
                     </span>
                   </div>
                 </div>
@@ -269,8 +269,8 @@ export default function Home() {
                       Henkilökohtainen hoitosuunnitelma:
                     </strong>
                     <span className="text-slate-600 text-xs sm:text-sm">
-                      Annamme selkeän ehdotuksen käyntien sisällöstä, aikataulusta
-                      ja nimetyistä hoitajista.
+                      Annamme selkeän ehdotuksen käyntien sisällöstä,
+                      aikataulusta ja nimetyistä hoitajista.
                     </span>
                   </div>
                 </div>
@@ -284,8 +284,8 @@ export default function Home() {
                       Palvelusetelit ja verohyödyt:
                     </strong>
                     <span className="text-slate-600 text-xs sm:text-sm">
-                      Käymme yhdessä läpi kuntatukea ja selvitämme kaikki kustannukset
-                      alusta asti.
+                      Käymme yhdessä läpi kuntatukea ja selvitämme kaikki
+                      kustannukset alusta asti.
                     </span>
                   </div>
                 </div>
@@ -353,8 +353,8 @@ export default function Home() {
           <div className="mx-auto grid max-w-4xl grid-cols-1 gap-4 text-center sm:grid-cols-3">
             {[
               { city: 'Lohja', tel: '050 555 1187' },
-              { city: 'Espoo', tel: '044 793 7886' },
-              { city: 'Raasepori', tel: '044 763 1820' },
+              { city: 'Espoo', tel: '050 555 1187' },
+              { city: 'Raasepori', tel: '0444 935 310' },
             ].map((loc, i) => (
               <ScrollReveal key={loc.city} delay={i * 100}>
                 <div className="bg-slate-800/80 backdrop-blur-xs p-5 rounded-2xl border border-slate-700/80 hover:border-cyan-500/50 transition-all">

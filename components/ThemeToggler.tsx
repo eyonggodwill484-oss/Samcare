@@ -8,7 +8,7 @@ export default function ThemeToggler() {
       type="button"
       aria-label="Vaihda väriteemaa"
       title="Vaihda väriteemaa"
-      className="inline-flex size-10 shrink-0 items-center justify-center rounded-full border border-[#3dc9b2] bg-white text-[#045184] transition-colors hover:bg-[#eafaf7] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#045184] [&_svg]:size-4"
+      className="inline-flex size-10 shrink-0 items-center justify-center rounded-full border border-[#3dc9b2]/60 bg-white text-[#045184] transition-colors hover:bg-[#eafaf7] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#045184] [&_svg]:size-4 dark:border-[#62ddc9]/40 dark:bg-[#172e39] dark:text-[#62ddc9] dark:hover:bg-[#23434a]"
     />
   );
 }

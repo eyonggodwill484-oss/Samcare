@@ -36,16 +36,16 @@ export default function TestimonialsSection() {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-white py-20 text-slate-900">
+    <section className="relative overflow-hidden bg-white py-20 text-slate-900 dark:bg-[#09151d] dark:text-[#edf5f5]">
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto mb-16 max-w-3xl space-y-3 text-center">
           <div className="inline-flex items-center gap-1.5 rounded-full bg-teal-100 px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-teal-800">
             Asiakkaiden ja perheiden kokemuksia
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-[#edf5f5]">
             Aitoa luottamusta perheiltä ja asiakkailta
           </h2>
-          <p className="text-slate-600 text-base sm:text-lg">
+          <p className="text-slate-600 text-base sm:text-lg dark:text-[#a9bcc3]">
             Hoivapalvelut toteutetaan aina henkilöstä toiseen. Tyytyväiset asiakkaat ja helpottuneet perheet kertovat parhaiten hoivamme laadusta.
           </p>
         </div>

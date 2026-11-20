@@ -28,12 +28,12 @@ export default function ServiceDocuments() {
   return (
     <section
       aria-labelledby="site-documents-title"
-      className="border-t border-slate-200 bg-slate-50 px-4 py-8 sm:px-6 lg:px-8"
+      className="border-t border-slate-200 bg-slate-50 px-4 py-8 sm:px-6 lg:px-8 dark:border-[#29424d] dark:bg-[#0d1d27]"
     >
       <div className="mx-auto max-w-7xl">
         <h2
           id="site-documents-title"
-          className="mb-4 text-center text-sm font-semibold text-slate-700"
+          className="mb-4 text-center text-sm font-semibold text-slate-700 dark:text-[#d7e5e8]"
         >
           Sam&apos;s Care -asiakirjat
         </h2>
@@ -45,7 +45,7 @@ export default function ServiceDocuments() {
               target="_blank"
               rel="noopener noreferrer"
               variant="outline"
-              className="w-full whitespace-normal text-center leading-tight"
+              className="document-link w-full whitespace-normal text-center leading-tight"
             >
               <Icon aria-hidden="true" className="size-5 shrink-0" />
               <span>{label}</span>

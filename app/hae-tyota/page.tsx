@@ -7,8 +7,7 @@ import {
   CheckCircle2,
   Send,
   Heart,
-  Clock,
-  GraduationCap
+  Clock
 } from "lucide-react";
 import { createMailtoLink } from "@/lib/mailto";
 
@@ -88,16 +87,6 @@ export default function HaeTyotaPage() {
               <h3 className="text-lg font-bold text-slate-900">Rauhalliset käyntiajat</h3>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                 Emme juoksuta hoitajiamme minuuttiaikataululla. Voit keskittyä asiakkaaseen ja antaa parasta mahdollista hoivaa ilman uupumista.
-              </p>
-            </div>
-
-            <div className="p-6 rounded-3xl bg-slate-50 border border-slate-200 space-y-3">
-              <div className="w-12 h-12 rounded-2xl bg-teal-100 text-teal-800 flex items-center justify-center font-bold">
-                <GraduationCap className="w-6 h-6" />
-              </div>
-              <h3 className="text-lg font-bold text-slate-900">Maksuton lääkelupa ja Apotti</h3>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                Puuttuuko LOVe/LOP-lääkelupa tai Apotti-osaaminen? Voit suorittaa lääkehoidon koulutuksen ja näyttökokeet maksuttomasti kauttamme.
               </p>
             </div>
 

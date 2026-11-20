@@ -144,15 +144,15 @@ export default function AjanvarausPage() {
                         onClick={() => setService(srv.id)}
                         className={`p-4 rounded-2xl text-left border transition-all flex flex-col justify-between ${
                           isSelected
-                            ? "bg-cyan-50/80 border-cyan-600 ring-2 ring-cyan-600/20"
+                            ? "bg-emerald-100/80 border-emerald-500 ring-2 ring-emerald-500/20"
                             : "bg-white border-slate-200 hover:border-slate-300 hover:bg-slate-50"
                         }`}
                       >
                         <div className="flex items-center justify-between mb-2">
-                          <div className={`p-2 rounded-xl ${isSelected ? "bg-cyan-600 text-white" : "bg-slate-100 text-slate-600"}`}>
+                          <div className={`p-2 rounded-xl ${isSelected ? "bg-emerald-600 text-white" : "bg-slate-100 text-slate-600"}`}>
                             <Icon className="w-4 h-4" />
                           </div>
-                          {isSelected && <CheckCircle2 className="w-4 h-4 text-cyan-600" />}
+                          {isSelected && <CheckCircle2 className="w-4 h-4 text-emerald-600" />}
                         </div>
                         <div>
                           <div className="text-xs sm:text-sm font-bold text-slate-900">{srv.name}</div>
